@@ -3,8 +3,8 @@
 
 ## Idee
 + Alternatief voor traditioneel aanmelden
--> username = face recognition (python / windows tablet)
--> password = hand gesture (leap motion)
+ - username = face recognition (python / windows tablet)
+ - password = hand gesture (leap motion)
 
 ## Website
 + Service moet als op zichzelf staand product beschouwd worden
