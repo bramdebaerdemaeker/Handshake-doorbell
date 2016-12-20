@@ -22,10 +22,10 @@
 
 
 ## to do
-- frontend:
-+ branding: belangrijke factoren die visueel duidelijk moeten zijn: safety, easy to use,...
-+ website opzetten 
++ frontend:
+ - branding: belangrijke factoren die visueel duidelijk moeten zijn: safety, easy to use,...
+ - website opzetten 
 
-- backend:
-+ face recognition op windows tablet testen
-+ hand gestures opslaan via leaptrainer of alternatief, opgeslagen data hiervan omzetten naar password
++ backend:
+ - face recognition op windows tablet testen
+ - hand gestures opslaan via leaptrainer of alternatief, opgeslagen data hiervan omzetten naar password
