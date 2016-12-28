@@ -8,11 +8,15 @@
   min-height: 50px;
   color: $black;
   background-color: $white;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: $shadow-nav;
+
+  .logo {
+    font-family: avenir-bold;
+  }
 
   .buy {
-    border: 1px solid white;
-    background-color: #2db2ff;
+    border: none;
+    background-color: $bg-button;
     border-radius: 10px;
     padding: 6px 15px;
     color: $white;

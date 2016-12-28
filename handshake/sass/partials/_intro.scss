@@ -1,9 +1,13 @@
 .intro {
-  margin-bottom: 200px;
-  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.intro-header {
+  font-size: 1.2em;
 }
 
 .intro-body {

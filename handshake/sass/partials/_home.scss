@@ -2,7 +2,7 @@
 	height: 80vh;
 	width: 100%;
 	position: relative;
-  background: $bg-section1 no-repeat center;
+  background: $bg-section-home no-repeat center;
 	display: flex;
 	align-items: center;
 
@@ -22,5 +22,7 @@
 		margin-top: 22%;
 		margin-left: 15%;
 		color: $white;
+		font-size: 2.8em;
+		font-family: avenir-bold;
 	}
 }

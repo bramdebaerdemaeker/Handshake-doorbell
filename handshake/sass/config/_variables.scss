@@ -1,37 +1,72 @@
 /*
- *
- * define main colors */
+*
+* define fonts */
 
- $white: #ffffff;
- $black: #000000;
- $bg-even: #6b7a8f;
+@font-face {
+  font-family: avenir-regular;
+  src:url('/fonts/AvenirNextLTPro-Regular.woff');
+}
 
+@font-face {
+  font-family: avenir-bold;
+  src:url('/fonts/AvenirNextLTPro-Bold.woff');
+}
 
-
-/*
- *
- * navbar */
-
- $nav-title-accent-color: #2dc4f5;
-
-
-/*
- *
- * section1 */
-
- $bg-section1: url('http://placehold.it/1920x1200');
-
-
+@font-face {
+  font-family: museo;
+  src:url('/fonts/MuseoSansCyrl.woff');
+}
 
 
 
 /*
- *
- * mixins */
+*
+* define main colors */
 
- @mixin transform($transformation) {
+$white: #ffffff;
+$black: #000000;
+$bg-even: #6b7a8f;
+$bg-button: #2db2ff;
+
+
+
+/*
+*
+* navbar */
+
+$nav-title-accent-color: #2dc4f5;
+$shadow-nav: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+
+/*
+*
+* section1 */
+
+$bg-section-home: url('http://placehold.it/1920x1200');
+
+
+/*
+*
+* section2 */
+
+$bg-color-section2: #1b1919;
+
+
+
+/*
+*
+* section3 */
+
+
+
+
+/*
+*
+* mixins */
+
+@mixin transform($transformation) {
   -webkit-transform: $transformation;
-     -moz-transform: $transformation;
-      -ms-transform: $transformation;
-          transform: $transformation;
+  -moz-transform: $transformation;
+  -ms-transform: $transformation;
+  transform: $transformation;
 }
