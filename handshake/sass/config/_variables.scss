@@ -1,0 +1,37 @@
+/*
+ *
+ * define main colors */
+
+ $white: #ffffff;
+ $black: #000000;
+ $bg-even: #6b7a8f;
+
+
+
+/*
+ *
+ * navbar */
+
+ $nav-title-accent-color: #2dc4f5;
+
+
+/*
+ *
+ * section1 */
+
+ $bg-section1: url('http://placehold.it/1920x1200');
+
+
+
+
+
+/*
+ *
+ * mixins */
+
+ @mixin transform($transformation) {
+  -webkit-transform: $transformation;
+     -moz-transform: $transformation;
+      -ms-transform: $transformation;
+          transform: $transformation;
+}

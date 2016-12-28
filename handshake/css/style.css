@@ -1,0 +1,120 @@
+/*
+ *
+ * define main colors */
+/*
+ *
+ * navbar */
+/*
+ *
+ * section1 */
+/*
+ *
+ * mixins */
+body {
+  margin: 0; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.nav {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  min-height: 50px;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .nav .buy {
+    border: 1px solid white;
+    background-color: #2db2ff;
+    border-radius: 10px;
+    padding: 6px 15px;
+    color: #ffffff; }
+  .nav .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%; }
+    .nav .nav-links a,
+    .nav .nav-links a:hover,
+    .nav .nav-links a:visited {
+      color: #000000;
+      text-decoration: none;
+      align-self: center; }
+
+.home {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  background: url("http://placehold.it/1920x1200") no-repeat center;
+  display: flex;
+  align-items: center; }
+  .home:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: right bottom;
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    transform: skewY(-3deg); }
+  .home h1 {
+    margin-top: 22%;
+    margin-left: 15%;
+    color: #ffffff; }
+
+.intro {
+  margin-bottom: 200px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.intro-body {
+  display: flex;
+  justify-content: center; }
+  .intro-body span {
+    font-size: 2.3em; }
+  .intro-body .first-number,
+  .intro-body .second-number,
+  .intro-body .third-number {
+    width: 15%;
+    border: 1px solid green;
+    margin: 20px 50px;
+    text-align: center; }
+
+.section {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid #6b7a8f;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .section .feature-content {
+    width: 500px;
+    height: 400px; }
+  .section .feature-content,
+  .section .feature-image {
+    margin: 70px; }
+
+.section2 {
+  background-color: #1b1919;
+  color: #ffffff; }
+
+.section3 {
+  height: 50vh !important;
+  text-align: center; }
+  .section3 button {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    background-color: #2db2ff;
+    color: #ffffff; }
+
+/*# sourceMappingURL=style.css.map */
