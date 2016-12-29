@@ -1,0 +1,43 @@
+.nav {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  min-height: 50px;
+  color: $black;
+  background-color: $white;
+  box-shadow: $shadow-nav;
+
+  .logo {
+    font-family: avenir-bold;
+  }
+
+  .buy {
+    border: none;
+    background-color: $bg-button;
+    border-radius: 10px;
+    padding: 6px 15px;
+    color: $white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+
+    a,
+    a:hover,
+    a:visited {
+      color: $black;
+      text-decoration: none;
+      align-self: center;
+    }
+  }
+
+}

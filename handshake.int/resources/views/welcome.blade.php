@@ -1,94 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Handshake - login differently</title>
 
-        <title>Handshake</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
+    <!-- navigation -->
+    <div class="nav">
+      <div class="logo uppercase">
+        <h2>Handshake</h2>
+      </div>
+      <div class="nav-links">
+        <a href="#">About</a>
+        <a href="#">Features</a>
+        <a href="#">Contact</a>
+        <a href="#"><button type="button" class="buy uppercase" name="buy">download</button></a>
+      </div>
+    </div>
 
 
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+    <div class="home">
+      <h1 class="uppercase">the best</br>new way to login</h1>
+    </div>
 
-            <div class="content">
-                <div class="home">
-                    <div class="title m-b-md">
-                        Handshake
-                    </div>
-                </div>
+    <div class="intro">
+      <div class="intro-header">
+        <h1>Introducing Shakure</h1>
+      </div>
 
-                .
-            </div>
-
+      <div class="intro-body">
+        <div class="first-number">
+          <span>87%</span>
+          <h3 class="uppercase">faster</h3>
         </div>
-    </body>
+        <div class="second-number">
+          <span>100%</span>
+          <h3 class="uppercase">secure</h3>
+        </div>
+        <div class="third-number">
+          <span>76%</span>
+          <h3 class="uppercase">easier</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- section 1 -->
+      <div class="section section1">
+        <div class="feature-content">
+          <div class="feature-title">
+            <h2><span class="light-opacity">A faster, safer</span> </br> way to sign in.</h2>
+          </div>
+          <div class="feature-body test">
+            <p>
+              Meet the latest new way to sign in on all of your favorite platforms.
+              Forget about card readers, batches and fingerprint sensors, Shakure brings back the fun in a daily routine as "sign in".
+            </p>
+            <p>
+              Shakure is made to get rid of all of your time waisting login - type moments
+              and replace it with a way of authenticating that you'll never forget.
+
+          </p>
+            <p>
+              It's all the security of two - factor authentication, but all the convenience of Shakure.
+            </p>
+          </div>
+        </div>
+        <div class="feature-image">
+          <img src="http://placehold.it/400x450">
+        </div>
+      </div>
+
+      <!-- section 2 -->
+      <div class="section section2">
+
+        <div class="feature-image">
+          <img src="http://placehold.it/400x450">
+        </div>
+
+        <div class="feature-content">
+          <div class="feature-title">
+            <h2><span class="dark-opacity">No keys </br> No touch</span> </br> Just signing in.</h2>
+          </div>
+          <div class="feature-body">
+            <p>
+              Shakure is made for the purpose of getting things done more efficiently and uses the latest safety technologies,
+              making signing in faster and more secure than ever before.
+            </p>
+            <p>
+              You'll never have to open or touch anything. Just look in the camera, do your familiar handshake and you're in!
+          </p>
+            <p>
+              Not only is it fast and safe, it creates a smile on your face knowing signing in can be this easy.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- section 3 -->
+      <div class="section section3">
+        <div class="">
+          <h1>Shakure services</h1>
+          <p>Now. Are you interested in safe and fast, enjoying </br> your sign in process again? Just give it a try. </br> It's free</p>
+          <button type="button" name="button" class="uppercase">download</button>
+        </div>
+
+      </div>
+
+      <!-- footer -->
+      <div class="footer">
+
+      </div>
+
+
+    </div>
+
+
+  </body>
 </html>
