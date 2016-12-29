@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Handshake - login differently</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
 
