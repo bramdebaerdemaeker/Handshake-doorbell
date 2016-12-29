@@ -40,8 +40,8 @@
 .section3 {
   height: 50vh !important;
   text-align: center;
-  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 0.1px, transparent 1px, transparent 100%);
-  background-size: 25px 25px;
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 0.1px, transparent 1px, transparent 100%);
+  background-size: 15px 15px;
 
   button {
       border: none;
@@ -50,10 +50,6 @@
       background-color: $bg-button;
       color: $white;
       font-size: 1em;
-
-      &:hover {
-        cursor: pointer;
-      }
   }
 }
 
