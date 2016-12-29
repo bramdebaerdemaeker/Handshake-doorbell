@@ -57,6 +57,8 @@ body {
     border-radius: 10px;
     padding: 6px 15px;
     color: #ffffff; }
+    .nav .buy:hover {
+      cursor: pointer; }
   .nav .nav-links {
     display: flex;
     justify-content: space-around;
@@ -96,7 +98,6 @@ body {
     font-family: avenir-bold; }
 
 .intro {
-  margin-bottom: 100px;
   margin-top: 80px;
   display: flex;
   flex-direction: column;
@@ -147,8 +148,8 @@ body {
 .section3 {
   height: 50vh !important;
   text-align: center;
-  background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 0.1px, transparent 1px, transparent 100%);
-  background-size: 15px 15px; }
+  background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 0.1px, transparent 1px, transparent 100%);
+  background-size: 25px 25px; }
   .section3 button {
     border: none;
     border-radius: 25px;
@@ -156,6 +157,8 @@ body {
     background-color: #2db2ff;
     color: #ffffff;
     font-size: 1em; }
+    .section3 button:hover {
+      cursor: pointer; }
 
 .footer {
   height: 80px;
