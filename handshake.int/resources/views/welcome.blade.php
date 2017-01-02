@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Handshake - login differently</title>
+@extends('layout')
 
-    <link rel="stylesheet" href="css/app.css">
-  </head>
-  <body>
-
-    <!-- navigation -->
-    <div class="nav">
-      <div class="logo uppercase">
-        <h2>Handshake</h2>
-      </div>
-      <div class="nav-links">
-        <a href="#">About</a>
-        <a href="#">Features</a>
-        <a href="#">Contact</a>
-        <a href="#"><button type="button" class="buy uppercase" name="buy">download</button></a>
-      </div>
-    </div>
-
+@section('content')
 
     <div class="home">
       <h1 class="uppercase">the best</br>new way to login</h1>
@@ -33,15 +13,15 @@
 
       <div class="intro-body">
         <div class="first-number">
-          <span>87%</span>
+          <span class="count">87</span><span>%</span>
           <h3 class="uppercase">faster</h3>
         </div>
         <div class="second-number">
-          <span>100%</span>
+          <span class="count">100</span><span>%</span>
           <h3 class="uppercase">secure</h3>
         </div>
         <div class="third-number">
-          <span>76%</span>
+          <span class="count">76</span><span>%</span>
           <h3 class="uppercase">easier</h3>
         </div>
       </div>
@@ -106,19 +86,11 @@
         <div class="">
           <h1>Shakure services</h1>
           <p>Now. Are you interested in safe and fast, enjoying </br> your sign in process again? Just give it a try. </br> It's free</p>
-          <button type="button" name="button" class="uppercase">download</button>
+          <button type="button" name="button" class="uppercase">try it now</button>
         </div>
 
       </div>
 
-      <!-- footer -->
-      <div class="footer">
-
-      </div>
-
-
     </div>
 
-
-  </body>
-</html>
+@stop
