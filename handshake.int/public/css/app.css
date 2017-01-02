@@ -196,6 +196,15 @@ body {
         border: none;
         border-radius: 2px;
         padding: 15px; }
+    .section-contact .contact-content button {
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      background-color: #1e94e2;
+      padding: 15px;
+      color: #ffffff; }
+      .section-contact .contact-content button:hover {
+        cursor: pointer; }
 
 .footer {
   height: 80px;

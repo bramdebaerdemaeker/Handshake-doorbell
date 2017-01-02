@@ -108,6 +108,19 @@
       }
     }
 
+    button {
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      background-color: #1e94e2;
+      padding: 15px;
+      color: $white;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
   }
 }
 
