@@ -86,7 +86,7 @@
         <div class="">
           <h1>Shakure services</h1>
           <p>Now. Are you interested in safe and fast, enjoying </br> your sign in process again? Just give it a try. </br> It's free</p>
-            <a href="login"><button type="button" name="button" class="uppercase">try it now</button></a>
+            <a href="register"><button type="button" name="button" class="uppercase">try it now</button></a>
         </div>
 
       </div>
