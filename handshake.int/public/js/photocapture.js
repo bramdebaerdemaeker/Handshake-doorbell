@@ -18,12 +18,14 @@
     var canvas = null;
     var photo = null;
     var startbutton = null;
+    var submit = null;
 
     function startup() {
         video = document.getElementById('video');
         canvas = document.getElementById('canvas');
         photo = document.getElementById('photo');
         startbutton = document.getElementById('startbutton');
+        submit = document.getElementById('submit');
 
         navigator.getMedia = ( navigator.getUserMedia ||
         navigator.webkitGetUserMedia ||
@@ -71,6 +73,7 @@
         startbutton.addEventListener('click', function(ev){
             takepicture();
             ev.preventDefault();
+            submit.click();
         }, false);
 
         clearphoto();
