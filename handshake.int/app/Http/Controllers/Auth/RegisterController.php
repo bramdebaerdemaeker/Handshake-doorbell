@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
@@ -30,6 +31,21 @@ class RegisterController extends Controller
      */
     protected $redirectTo = '/home';
 
+    public function register(Request $request)
+    {
+        $image = $request->input('photo');
+        $email = $request->input('email');
+        $name = $request->input('name');
+        $this->validator($request->all())->validate();
+        $img = substr($image, 1+strrpos($image, ','));
+        file_put_contents(public_path() . "/img/". $name. '.png', base64_decode($img));
+        $link = "/img/". $name. '.png';
+        $user = $this->create(["email" => $email, "name" => $name]);
+        $user->image_link = $link;
+        $user->save();
+
+    }
+
     /**
      * Create a new controller instance.
      *
@@ -38,19 +54,6 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-    }
-
-    public function register(Request $request)
-    {
-        dd($request->file('picture'));
-        $this->validator($request->all())->validate();
-
-        event(new Registered($user = $this->create($request->all())));
-
-        $this->guard()->login($user);
-
-        return $this->registered($request, $user)
-            ?: redirect($this->redirectPath());
     }
 
     /**
@@ -62,9 +65,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'name' => 'required|max:30|unique:users',
+            'photo' => 'required'
         ]);
     }
 
@@ -77,9 +80,8 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'name' => $data['name']
         ]);
     }
 }

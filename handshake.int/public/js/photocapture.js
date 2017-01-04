@@ -26,7 +26,6 @@
         photo = document.getElementById('photo');
         startbutton = document.getElementById('startbutton');
         submit = document.getElementById('submit');
-
         navigator.getMedia = ( navigator.getUserMedia ||
         navigator.webkitGetUserMedia ||
         navigator.mozGetUserMedia ||
@@ -46,8 +45,8 @@
                 }
                 video.play();
             },
-            function(err) {
-                console.log("An error occured! " + err);
+            function() {
+                alert("Turn on your camera!");
             }
         );
 
@@ -73,7 +72,6 @@
         startbutton.addEventListener('click', function(ev){
             takepicture();
             ev.preventDefault();
-            submit.click();
         }, false);
 
         clearphoto();
@@ -105,7 +103,8 @@
             context.drawImage(video, 0, 0, width, height);
 
             var data = canvas.toDataURL('image/png');
-            photo.setAttribute('src', data);
+            photo.setAttribute('value', data);
+            submit.click();
         } else {
             clearphoto();
         }

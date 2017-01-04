@@ -3,9 +3,26 @@
 @section('content')
 
 <div class="section">
-  <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+  <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}" enctype="multipart/form-data">
       {{ csrf_field() }}
-          <input type="image" id="photo" alt="The screen capture will appear in this box.">
+      <input type="hidden" id="photo" name="photo">
+      @if ($errors->has('email'))
+          <span class="help-block">
+          <strong>Zet je camera aan!</strong>
+        </span>
+      @endif
+      <input type="email" name="email" placeholder="email">
+      @if ($errors->has('email'))
+          <span class="help-block">
+          <strong>{{ $errors->first('email') }}</strong>
+        </span>
+      @endif
+      <input type="text" name="name">
+      @if ($errors->has('name'))
+          <span class="help-block">
+          <strong>{{ $errors->first('name') }}</strong>
+        </span>
+      @endif
       <input id="submit" type="submit" ></input>
   </form>
 
@@ -14,13 +31,10 @@
     </div>
     <canvas id="canvas">
     </canvas>
-    <div class="output">
-        <img id="photo" alt="The screen capture will appear in this box.">
-    </div>
     <button id="startbutton">Button</button>
-    <script src="/js/photocapture.js"></script>
+
 </div>
 
-
+<script src="/js/photocapture.js"></script>
 
 @endsection
