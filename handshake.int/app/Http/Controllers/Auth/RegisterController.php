@@ -49,7 +49,6 @@ class RegisterController extends Controller
         );
 
         $response = $Kairos->enroll($argumentArray);
-        dd($response);
 
 
         file_put_contents(public_path() . "/img/". $name. '.png', base64_decode($img));
@@ -58,6 +57,8 @@ class RegisterController extends Controller
         $user->image_link = $link;
         $user->save();
     }
+
+
 
     /**
      * Create a new controller instance.
