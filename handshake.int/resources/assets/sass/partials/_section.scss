@@ -124,6 +124,11 @@
   }
 }
 
+
+/*
+*
+* authorization section */
+
 .section-auth {
   height: 45%;
   width: 40%;
@@ -139,7 +144,7 @@
       margin-top: 25px;
   }
 
-  img {
+  video {
     border-radius: 50%;
   }
 
@@ -150,37 +155,55 @@
     flex-direction: column;
     height: 100%;
   }
-}
 
-.section-login {
-  @extend .section-auth;
-  display: flex;
-  .picture {
-    width: 50%;
-  }
+  .information {
+    @extend .picture;
 
-  .instructions {
-    width: 50%;
-    border: 1px solid black;
-
-    h2 {
-      margin-left: 21%;
-    }
-
-    hr {
-      width: 60%;
-    }
-
-    li {
-      margin-left: 20%;
-      // list-style: none;
+    input {
       padding: 5px;
+      margin: 5px;
     }
   }
+
+  form {
+    height: 100%;
+  }
 }
+
+
+// .section-login {
+//   @extend .section-auth;
+//   display: flex;
+//   .picture {
+//     width: 50%;
+//   }
+//
+//   .instructions {
+//     width: 50%;
+//     border: 1px solid black;
+//
+//     h2 {
+//       margin-left: 21%;
+//     }
+//
+//     hr {
+//       width: 60%;
+//     }
+//
+//     li {
+//       margin-left: 20%;
+//       // list-style: none;
+//       padding: 5px;
+//     }
+//   }
+// }
 
 .section-register {
   @extend .section-auth;
+
+  .information .submit-hidden {
+    display: none;
+  }
 }
 
 .footer {
