@@ -58,6 +58,10 @@ class RegisterController extends Controller
         $user->save();
     }
 
+    public function gestures(){
+        return view('gestures');
+    }
+
 
 
     /**

@@ -20,3 +20,4 @@ Route::get('/home', 'HomeController@index');
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/gestures', 'Auth\RegisterController@gestures');
