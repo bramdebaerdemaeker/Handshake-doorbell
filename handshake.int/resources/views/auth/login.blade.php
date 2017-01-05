@@ -1,13 +1,10 @@
 @extends('layout')
 
 @section('content')
-
+<!--
 <div class="section">
   <div class="section-login">
-    <div class="picture">
-      <img src="http://placehold.it/200x200">
-      <button type="button" name="button">take picture</button>
-    </div>
+
     <div class="instructions">
       <h2>Face recognition</h2>
       <hr>
@@ -18,15 +15,26 @@
         <li>data</li>
       </ul>
     </div>
+    <div class="picture">
+      <img src="http://placehold.it/200x200">
+      <button type="button" name="button">take picture</button>
+    </div>
+
   </div>
-</div>
+</div> -->
 
 <div class="section">
   <div class="section-register">
+    <div class="information">
+      <h2>Become a member </h2>
+      <input type="text" placeholder="Email">
+      <input type="text" placeholder="Name">
+      <button type="button" name="button" id="hide-information">next</button>
+    </div>
     <div class="picture">
       <h2>Face recognition</h2>
       <img src="http://placehold.it/200x200">
-      <button type="button" name="button">take picture</button>
+      <button type="button" name="button" id="hide-picture">take picture</button>
     </div>
   </div>
 </div>
