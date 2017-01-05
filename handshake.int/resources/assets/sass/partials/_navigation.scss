@@ -12,6 +12,11 @@
 
   .logo {
     font-family: avenir-bold;
+
+    a {
+      text-decoration: none;
+      color: $black;
+    }
   }
 
   .buy {
