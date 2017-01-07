@@ -44,11 +44,11 @@ class RegisterController extends Controller
         $gallery = 'gallery';
         $argumentArray = array(
             "image" => $img,
-            "subject_id" => $name,
             "gallery_name" => $gallery
         );
 
-        $response = $Kairos->enroll($argumentArray);
+        $response = $Kairos->recognize($argumentArray);
+        dd($response);
 
 
         file_put_contents(public_path() . "/img/". $name. '.png', base64_decode($img));
