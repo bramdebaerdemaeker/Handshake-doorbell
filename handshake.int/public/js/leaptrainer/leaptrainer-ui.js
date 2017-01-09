@@ -71,7 +71,7 @@ jQuery(document).ready(function ($) {
      * We get the DOM crawling done now during setup, so it's not consuming cycles at runtime.
      */
     var win					= $(window),
-        body				= $("#body"),
+        body				= $("body"),
         gestureCreationArea	= $('#gesture-creation-area'),
         creationForm		= $('#new-gesture-form'),
         existingGestureList = $("#existing-gestures"),
@@ -299,9 +299,8 @@ jQuery(document).ready(function ($) {
          *
          * The gesture name is upper-cased for uniformity (TODO: This shouldn't really be a requirement).
          */
-        trainer.create(name);
-        trainer.startTraining(name, 5);
-
+        trainer.create(name, false);
+        console.log(trainer.gestures);
         return false;
     });
 
@@ -326,7 +325,6 @@ jQuery(document).ready(function ($) {
         main.css({background: color});
 
         gestureCreationArea.css({display: 'none'});
-        optionsButton	   .css({display: 'none'});
         versionTag		   .css({display: 'none'});
         forkMe			   .css({display: 'none'});
 
@@ -343,7 +341,6 @@ jQuery(document).ready(function ($) {
         main.css({background: ''});
 
         gestureCreationArea.css({display: ''});
-        optionsButton	   .css({display: ''});
         versionTag		   .css({display: ''});
         forkMe			   .css({display: ''});
 
@@ -362,7 +359,7 @@ jQuery(document).ready(function ($) {
      * When a new gesture is created by the trainer, an entry is added to the gestures list.
      */
     trainer.on('gesture-created', function(gestureName, trainingSkipped) {
-
+        setOutputText('Gesture created!');
     });
 
     /*
@@ -382,7 +379,7 @@ jQuery(document).ready(function ($) {
     trainer.on('training-started', function(gestureName) {
 
         var trainingGestureCount = trainer.trainingGestures;
-
+        console.log("training start");
         setOutputText('Perform the ' + gestureName + ' gesture or pose ' + (trainingGestureCount > 1 ? trainingGestureCount + ' times' : ''));
     });
 
@@ -391,13 +388,12 @@ jQuery(document).ready(function ($) {
      * update the output text to display how many more gestures need to be performed.
      */
     trainer.on('training-gesture-saved', function(gestureName, trainingSet) {
-
         var trainingGestures = trainer.trainingGestures;
 
         renderGesture();
 
         var remaining = (trainingGestures - trainingSet.length);
-
+    console.log(gestureName);
         setOutputText('Perform the ' + gestureName + ' gesture ' + (remaining == 1 ? ' once more' : remaining + ' more times'));
     });
 
@@ -406,7 +402,7 @@ jQuery(document).ready(function ($) {
      * 100% and green.
      */
     trainer.on('training-complete', function(gestureName, trainingSet, isPose) {
-
+        console.log("training complete");
         training = false;
 
         renderGesture();
@@ -419,15 +415,11 @@ jQuery(document).ready(function ($) {
      * match the hit value, and set the output text.
      */
     trainer.on('gesture-recognized', function(hit, gestureName, allHits) {
-
-
-        setAllGestureScales(allHits, gestureName);
+        console.log("recognized " + gestureName);
 
         renderGesture();
 
         var hitPercentage = Math.min(parseInt(100 * hit), 100);
-
-        setGestureScale(gestureName, hitPercentage, green, green);
 
         setOutputText('<span style="font-weight: bold">' + gestureName + '</span> : ' + hitPercentage + '% MATCH');
     });

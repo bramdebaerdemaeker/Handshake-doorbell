@@ -47,18 +47,18 @@ var LeapTrainer = {};
  * the LeapTrainer.Controller.  For example:
  *
  * 	LeapTrainer.SVMController = LeapTrainer.Controller.extend({
- * 
+ *
  * 		recognize: function(gesture, frameCount) { ...Match using support vector machines... });
  *  });
  *
  *  To call an overidden function, use "this._super". For example:
  *
  * 	LeapTrainer.FrameLoggingController = LeapTrainer.Controller.extend({
- * 
- * 		recordFrame: function(frame, lastFrame, recordVector, recordValue) { 
- * 
+ *
+ * 		recordFrame: function(frame, lastFrame, recordVector, recordValue) {
+ *
  * 			this._super(options); //Calls the LeapController.recordFrame function
- * 
+ *
  * 			this.logFrame(frame);
  * 		});
  *  });
@@ -133,7 +133,7 @@ LeapTrainer.Controller = Class.extend({
     pauseOnWindowBlur		: false, // If this is TRUE, then recording and recognition are paused when the window loses the focus, and restarted when it's regained
 
     minRecordingVelocity	: 300,	// The minimum velocity a frame needs to clock in at to trigger gesture recording, or below to stop gesture recording (by default)
-    maxRecordingVelocity	: 30,	// The maximum velocity a frame can measure at and still trigger pose recording, or above which to stop pose recording (by default)
+    maxRecordingVelocity	: 20,	// The maximum velocity a frame can measure at and still trigger pose recording, or above which to stop pose recording (by default)
 
     minGestureFrames		: 5,	// The minimum number of recorded frames considered as possibly containing a recognisable gesture
     minPoseFrames			: 75,	// The minimum number of frames that need to hit as recordable before pose recording is actually triggered
@@ -144,7 +144,7 @@ LeapTrainer.Controller = Class.extend({
     hitThreshold			: 0.80,	// The correlation output value above which a gesture is considered recognized. Raise this to make matching more strict
 
     trainingCountdown		: 3,	// The number of seconds after startTraining is called that training begins. This number of 'training-countdown' events will be emit.
-    trainingGestures		: 10,	// The number of gestures samples that collected during training
+    trainingGestures		: 5,	// The number of gestures samples that collected during training
     convolutionFactor		: 0,	// The factor by which training samples will be convolved over a gaussian distribution to expand the available training data
 
     downtime				: 1000,	// The number of milliseconds after a gesture is identified before another gesture recording cycle can begin
@@ -239,13 +239,13 @@ LeapTrainer.Controller = Class.extend({
             if (new Date().getTime() - this.lastHit < this.downtime) { return; }
 
 			/*
-			 * The recordableFrame function returns true or false - by default based on the overall velocity of the hands and pointables in the frame.  
-			 * 
-			 * If it returns true recording should either start, or the current frame should be added to the existing recording.  
-			 * 
-			 * If it returns false AND we're currently recording, then gesture recording has completed and the recognition function should be 
+			 * The recordableFrame function returns true or false - by default based on the overall velocity of the hands and pointables in the frame.
+			 *
+			 * If it returns true recording should either start, or the current frame should be added to the existing recording.
+			 *
+			 * If it returns false AND we're currently recording, then gesture recording has completed and the recognition function should be
 			 * called to see what it can do with the collected frames.
-			 * 
+			 *
 			 */
             if (this.recordableFrame(frame, this.minRecordingVelocity, this.maxRecordingVelocity)) {
 
@@ -264,19 +264,19 @@ LeapTrainer.Controller = Class.extend({
                 }
 
 				/*
-				 * We count the number of frames recorded in a gesture in order to check that the 
+				 * We count the number of frames recorded in a gesture in order to check that the
 				 * frame count is greater than minGestureFrames when recording is complete.
 				 */
                 frameCount++;
 
 				/*
-				 * The recordFrame function may be overridden, but in any case it's passed the current frame, the previous frame, and 
+				 * The recordFrame function may be overridden, but in any case it's passed the current frame, the previous frame, and
 				 * utility functions for adding vectors and individual values to the recorded gesture activity.
 				 */
                 this.recordFrame(frame, this.controller.frame(1), recordVector, recordValue);
 
 				/*
-				 * Since renderable frame data is not necessarily the same as frame data used for recognition, a renderable frame will be 
+				 * Since renderable frame data is not necessarily the same as frame data used for recognition, a renderable frame will be
 				 * recorded here IF the implementation provides one.
 				 */
                 this.recordRenderableFrame(frame, this.controller.frame(1));
@@ -284,7 +284,7 @@ LeapTrainer.Controller = Class.extend({
             } else if (recording) {
 
 				/*
-				 * If the frame should not be recorded but recording was active, then we deactivate recording and check to see if enough 
+				 * If the frame should not be recorded but recording was active, then we deactivate recording and check to see if enough
 				 * frames have been recorded to qualify for gesture recognition.
 				 */
                 recording = false;
@@ -302,7 +302,7 @@ LeapTrainer.Controller = Class.extend({
                     this.fire('gesture-detected', gesture, frameCount);
 
 					/*
-					 * Finally we pass the recorded gesture frames to either the saveTrainingGesture or recognize functions (either of which may also 
+					 * Finally we pass the recorded gesture frames to either the saveTrainingGesture or recognize functions (either of which may also
 					 * be overridden) depending on whether we're currently training a gesture or not.
 					 * the time of the last hit.
 					 */
@@ -326,7 +326,7 @@ LeapTrainer.Controller = Class.extend({
         this.controller.on('frame',	this.onFrame.bind(this));
 
 		/*
-		 * If pauseOnWindowBlur is true, then we bind the pause function to the controller blur event and the resume 
+		 * If pauseOnWindowBlur is true, then we bind the pause function to the controller blur event and the resume
 		 * function to the controller focus event
 		 */
         if (this.pauseOnWindowBlur) {
@@ -451,9 +451,9 @@ LeapTrainer.Controller = Class.extend({
      * Any format can be used - but the format expected by the LeapTrainer UI is - for each hand:
      *
      * 	{	position: 	[x, y, z],
-	 * 	 	direction: 	[x, y, z], 
-	 * 	 	palmNormal	[x, y, z], 
-	 * 
+	 * 	 	direction: 	[x, y, z],
+	 * 	 	palmNormal	[x, y, z],
+	 *
 	 * 		fingers: 	[ { position: [x, y, z], direction: [x, y, z], length: q },
 	 * 					  { position: [x, y, z], direction: [x, y, z], length: q },
 	 * 					  ... ]
@@ -627,7 +627,7 @@ LeapTrainer.Controller = Class.extend({
         if (trainingGestures.length == this.trainingGestures) {
 
 			/*
-			 * We expand the training data by generating a gaussian normalized distribution around the input.  This increases the 
+			 * We expand the training data by generating a gaussian normalized distribution around the input.  This increases the
 			 * number of training gestures used during recognition, without demanding more training samples from the user.
 			 */
             this.gestures[gestureName] = this.distribute(trainingGestures);
@@ -638,13 +638,13 @@ LeapTrainer.Controller = Class.extend({
             this.poses[gestureName] = isPose;
 
 			/*
-			 * Setting the trainingGesture variable back to NULL ensures that the system will attempt to recognize subsequent gestures 
+			 * Setting the trainingGesture variable back to NULL ensures that the system will attempt to recognize subsequent gestures
 			 * rather than save them as training data.
 			 */
             this.trainingGesture = null;
 
 			/*
-			 * The trainAlgorithm function provides an opportunity for machine learning recognition systems to train themselves on 
+			 * The trainAlgorithm function provides an opportunity for machine learning recognition systems to train themselves on
 			 * the full training data set before the training cycle completes.
 			 */
             this.trainAlgorithm(gestureName, trainingGestures);
@@ -773,8 +773,8 @@ LeapTrainer.Controller = Class.extend({
             } else {
 
 				/*
-				 * For each know gesture we generate a correlation value between the parameter gesture and a saved 
-				 * set of training gestures. This correlation value is a numeric value between 0.0 and 1.0 describing how similar 
+				 * For each know gesture we generate a correlation value between the parameter gesture and a saved
+				 * set of training gestures. This correlation value is a numeric value between 0.0 and 1.0 describing how similar
 				 * this gesture is to the training set.
 				 */
                 hit = this.correlate(gestureName, gestures[gestureName], gesture);
@@ -832,7 +832,7 @@ LeapTrainer.Controller = Class.extend({
             if (distance < nearest) {
 
 				/*
-				 * 'distance' here is the calculated distance between the parameter gesture and the training 
+				 * 'distance' here is the calculated distance between the parameter gesture and the training
 				 * gesture - so the smallest value indicates the closest match
 				 */
                 nearest = distance;
@@ -995,24 +995,24 @@ LeapTrainer.Controller = Class.extend({
 
 /*!
  * --------------------------------------------------------------------------------------------------------
- * 
+ *
  * 										GEOMETRIC TEMPLATE MATCHER
- * 
+ *
  * --------------------------------------------------------------------------------------------------------
- * 
- * Everything below this point is a geometric template matching implementation. This object implements the current 
+ *
+ * Everything below this point is a geometric template matching implementation. This object implements the current
  * DEFAULT default recognition strategy used by the framework.
- * 
+ *
  * This implementation is based on work at the University of Washington, described here:
- * 
+ *
  * 	http://depts.washington.edu/aimgroup/proj/dollar/pdollar.html
- * 
- * This implementation has been somewhat modified, functions in three dimensions, and has been 
+ *
+ * This implementation has been somewhat modified, functions in three dimensions, and has been
  * optimized for performance.
- * 
- * Theoretically this implementation CAN support multi-stroke gestures - but there is not yet support in the LeapTrainer 
+ *
+ * Theoretically this implementation CAN support multi-stroke gestures - but there is not yet support in the LeapTrainer
  * Controller or training UI for these kinds of gesture.
- * 
+ *
  * --------------------------------------------------------------------------------------------------------
  */
 
@@ -1181,7 +1181,7 @@ LeapTrainer.TemplateMatcher = Class.extend({
         }
 
 		/*
-		 * Rounding errors will occur short of adding the last point - in which case the array is padded by 
+		 * Rounding errors will occur short of adding the last point - in which case the array is padded by
 		 * duplicating the last point
 		 */
         if (resampledGesture.length != target) {

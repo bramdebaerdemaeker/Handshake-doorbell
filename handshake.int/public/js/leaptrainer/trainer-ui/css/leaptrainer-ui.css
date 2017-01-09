@@ -6,7 +6,7 @@ body 				{ font-family: Calibri; margin: 0px; -ms-touch-action: none; overflow-x
 .button:focus		{ background: #8AC9E1; }
 
 
-#gesture-creation-area 		{ height: 50px; background: #fff; margin: 22px 0px 0px 0px; padding-left: 22px; bottom: 0px; width: 318px; position: absolute; z-index: 9998; }
+#gesture-creation-area 		{ height: 50px; background: #fff; margin: 22px 0px 0px 0px; padding-left: 22px; bottom: 0px; width: 318px; position: absolute; z-index: 20; }
 #create-new-gesture 		{ width: 102px; float: left; }
 #gesture-creation-area img 	{ margin-left: 20px; }
 
@@ -19,7 +19,7 @@ body 				{ font-family: Calibri; margin: 0px; -ms-touch-action: none; overflow-x
 .overlay-open #overlay-shade							{ display: block; }
 .overlay-open #overlay									{ display: block; }
 
-#output-text											{ font-size: 24px; background: #A3DAEF; width: 100%; position: absolute; height: 50px; line-height: 50px; bottom: 0px; text-align: center; }
+#output-text											{ font-size: 24px; background: #A3DAEF; width: 100%; position: absolute; height: 50px; line-height: 50px; bottom: 0px; text-align: center;}
 
 #render-area 											{ background: transparent; }
 
