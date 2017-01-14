@@ -6,27 +6,6 @@
       <h1 class="uppercase">the best</br>new way to login</h1>
     </div>
 
-    <div class="intro">
-      <div class="intro-header">
-        <h1>Introducing Shakure</h1>
-      </div>
-
-      <div class="intro-body">
-        <div class="first-number">
-          <span class="count">87</span><span>%</span>
-          <h3 class="uppercase">faster</h3>
-        </div>
-        <div class="second-number">
-          <span class="count">100</span><span>%</span>
-          <h3 class="uppercase">secure</h3>
-        </div>
-        <div class="third-number">
-          <span class="count">76</span><span>%</span>
-          <h3 class="uppercase">easier</h3>
-        </div>
-      </div>
-    </div>
-
     <div class="container">
 
       <!-- section 1 -->
@@ -82,6 +61,48 @@
       </div>
 
       <!-- section 3 -->
+      <div class="section--feature-3">
+        <div class="section__content animation-element animation-element--slide-left">
+          <div class="section__content__title">
+            <h2><span>A faster, safer</span> </br> way to sign in.</h2>
+          </div>
+          <div class="section__content__body">
+            <p>
+              Meet the latest new way to sign in on all of your favorite platforms.
+              Forget about card readers, batches and fingerprint sensors, Shakure brings back the fun in a daily routine as "sign in".
+            </p>
+            <p>
+              Shakure is made to get rid of all of your time waisting login - type moments
+              and replace it with a way of authenticating that you'll never forget.
+
+          </p>
+            <p>
+              It's all the security of two - factor authentication, but all the convenience of Shakure.
+            </p>
+          </div>
+        </div>
+        <div class="section__img">
+          <img src="http://placehold.it/400x450">
+        </div>
+      </div>
+
+      <!-- section 4-->
+      <div class="section--count animation-element animation-element--count" id="count">
+          <div class="section--count__number">
+            <span class="count">87</span><span>%</span>
+            <h3 class="uppercase">faster</h3>
+          </div>
+          <div class="section--count__number">
+            <span class="count">100</span><span>%</span>
+            <h3 class="uppercase">secure</h3>
+          </div>
+          <div class="section--count__number">
+            <span class="count">76</span><span>%</span>
+            <h3 class="uppercase">easier</h3>
+          </div>
+      </div>
+
+      <!-- section 5 -->
       <div class="section--service">
         <div class="">
           <h1>Shakure services</h1>

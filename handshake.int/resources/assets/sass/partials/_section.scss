@@ -50,11 +50,31 @@
 
 .section--feature-2 {
     @extend .section;
-    background-color: #1b1919;
+    background-color: $bg-color-section-dark;
     color: $white;
 }
 
+.section--feature-3 {
+  @extend .section;
+}
 
+.section--count {
+  height: 25vh;
+  background-color: $bg-color-section-dark;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: $white;
+
+  .section--count__number {
+    width: 20%;
+    align-self: center;
+
+    span {
+      font-size: 2.3em;
+    }
+  }
+}
 
 /*
 *

@@ -12,7 +12,7 @@
     <!-- navigation -->
     <div class="nav">
       <div class="logo uppercase">
-        <a href="/"><h2>Handshake</h2></a>
+        <a href="/"><h2>shakure</h2></a>
       </div>
       <div class="nav-links">
         <a href="/">Home</a>

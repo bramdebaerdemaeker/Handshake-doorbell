@@ -2,6 +2,7 @@
   var $animation_elements = $('.animation-element');
   var $window = $(window);
   var $count_elements = $('.count');
+  var $count = document.getElementById('count');
 
   $window.on('scroll resize', check_if_in_view);
   $window.trigger('scroll');
@@ -18,18 +19,13 @@
     var element_bottom_position = (element_top_position + element_height);
 
     //check to see if this current container is within viewport
-
-
-    if ((element_bottom_position >= window_top_position + 200) &&
-        (element_top_position <= window_bottom_position + 200)) {
-      count();
       if ((element_bottom_position >= window_top_position - 250) &&
           (element_top_position <= window_bottom_position - 250)) {
         $element.addClass('in-view');
       } else {
         $element.removeClass('in-view');
       }
-    }
+
   });
 }
 
