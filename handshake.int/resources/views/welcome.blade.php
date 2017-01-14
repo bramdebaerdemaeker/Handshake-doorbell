@@ -30,12 +30,12 @@
     <div class="container">
 
       <!-- section 1 -->
-      <div class="section section1">
-        <div class="feature-content">
-          <div class="feature-title">
-            <h2><span class="light-opacity">A faster, safer</span> </br> way to sign in.</h2>
+      <div class="section">
+        <div class="section__content">
+          <div class="section__content__title">
+            <h2><span>A faster, safer</span> </br> way to sign in.</h2>
           </div>
-          <div class="feature-body test">
+          <div class="section__content__body">
             <p>
               Meet the latest new way to sign in on all of your favorite platforms.
               Forget about card readers, batches and fingerprint sensors, Shakure brings back the fun in a daily routine as "sign in".
@@ -50,23 +50,23 @@
             </p>
           </div>
         </div>
-        <div class="feature-image">
+        <div class="section__img">
           <img src="http://placehold.it/400x450">
         </div>
       </div>
 
       <!-- section 2 -->
-      <div class="section section2">
+      <div class="section--feature-2">
 
-        <div class="feature-image">
+        <div class="section__img">
           <img src="http://placehold.it/400x450">
         </div>
 
-        <div class="feature-content">
-          <div class="feature-title">
-            <h2><span class="dark-opacity">No keys </br> No touch</span> </br> Just signing in.</h2>
+        <div class="section__content">
+          <div class="section__content__title--inverted">
+            <h2><span>No keys </br> No touch</span> </br> Just signing in.</h2>
           </div>
-          <div class="feature-body">
+          <div class="section__content__body">
             <p>
               Shakure is made for the purpose of getting things done more efficiently and uses the latest safety technologies,
               making signing in faster and more secure than ever before.
@@ -82,11 +82,11 @@
       </div>
 
       <!-- section 3 -->
-      <div class="section section3">
+      <div class="section--service">
         <div class="">
           <h1>Shakure services</h1>
           <p>Now. Are you interested in safe and fast, enjoying </br> your sign in process again? Just give it a try. </br> It's free</p>
-            <a href="register"><button type="button" name="button" class="uppercase">try it now</button></a>
+            <a href="register"><button type="button" name="button" class="uppercase section__button">try it now</button></a>
         </div>
 
       </div>

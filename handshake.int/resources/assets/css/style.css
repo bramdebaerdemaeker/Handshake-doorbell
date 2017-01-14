@@ -52,7 +52,8 @@ body {
   .nav .logo {
     font-family: avenir-bold; }
     .nav .logo a {
-      text-decoration: none; }
+      text-decoration: none;
+      color: #000000; }
   .nav .buy {
     border: none;
     background-color: #2db2ff;
@@ -208,11 +209,14 @@ body {
       .section-contact .contact-content button:hover {
         cursor: pointer; }
 
-.section-auth, .section-login, .section-register {
+/*
+*
+* authorization section */
+.section-auth, .section-register {
   height: 45%;
   width: 40%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-  .section-auth button, .section-login button, .section-register button {
+  .section-auth button, .section-register button {
     border: none;
     border-radius: 25px;
     padding: 5px 10px;
@@ -220,29 +224,22 @@ body {
     color: #ffffff;
     font-size: 1em;
     margin-top: 25px; }
-  .section-auth img, .section-login img, .section-register img {
+  .section-auth video, .section-register video {
     border-radius: 50%; }
-  .section-auth .picture, .section-login .picture, .section-register .picture {
+  .section-auth .picture, .section-register .picture, .section-auth .information, .section-register .information {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100%; }
+  .section-auth .information input, .section-register .information input {
+    padding: 5px;
+    margin: 5px; }
+  .section-auth form, .section-register form {
+    height: 100%; }
 
-.section-login {
-  display: flex; }
-  .section-login .picture {
-    width: 50%; }
-  .section-login .instructions {
-    width: 50%;
-    border: 1px solid black; }
-    .section-login .instructions h2 {
-      margin-left: 21%; }
-    .section-login .instructions hr {
-      width: 60%; }
-    .section-login .instructions li {
-      margin-left: 20%;
-      padding: 5px; }
+.section-register .information .submit-hidden {
+  display: none; }
 
 .footer {
   height: 80px;

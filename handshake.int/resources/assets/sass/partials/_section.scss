@@ -1,212 +1,66 @@
-
+/*******************
+* Feature sections *
+********************/
 .section {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .feature-title {
-    font-family: avenir-regular;
-    font-size: 1.4em;
-    line-height: 130%;
-    letter-spacing: 2px;
-
-    .light-opacity {
-      opacity: .3;
-    }
-
-    .dark-opacity {
-      opacity: .5;
-    }
-  }
-
-  .feature-content {
-    width: 500px;
-    height: 400px;
-  }
-
-  .feature-content,
-  .feature-image {
-    margin: 70px;
-  }
-}
-
-.section2 {
-  background-color: #1b1919;
-  color: $white;
-}
-
-.section3 {
-  height: 50vh !important;
-  text-align: center;
-  background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 0.1px, transparent 1px, transparent 100%);
-  background-size: 15px 15px;
-
-  button {
-      border: none;
-      border-radius: 25px;
-      padding: 10px 15px;
-      background-color: $bg-button;
-      color: $white;
-      font-size: 1em;
-  }
-}
-
-/*
-*
-* contact page */
-
-.section-contact{
-  flex-direction: column;
-
-  .contact-image{
-    background: $bg-section-home no-repeat center;
-    height: 50%;
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    .section__content__title {
+        font-family: avenir-regular;
+        font-size: 1.4em;
+        line-height: 130%;
+        letter-spacing: 2px;
 
-    h1 {
-  		color: $white;
-  		font-size: 3.2em;
-  		font-family: avenir-bold;
+        span {
+          opacity: 0.3;
+        }
+
     }
-  }
-
-  .contact-content{
-    height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    .form {
-      width: 60%;
-      height: 100%;
-      margin-top: 30px;
+    .section__content__title--inverted {
+        @extend .section__content__title;
+        span {
+          opacity: 0.5;
+        }
     }
 
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 55%;
-      margin-top: 20px;
-      margin-left: 25%;
+    .section__content {
+        width: 500px;
+        height: 400px;
+    }
 
-      input,
-      input:-webkit-autofill,
-      textarea {
-        margin-top: 5px;
-        background-color: #dadada !important;
+    .section__content,
+    .section__img {
+        margin: 70px;
+    }
+
+    .section__button {
         border: none;
-        border-radius: 2px;
-        padding: 15px;
-
-      }
+        border-radius: 25px;
+        padding: 10px 15px;
+        background-color: $bg-button;
+        color: $white;
+        font-size: 1em;
     }
-
-    button {
-      border: none;
-      border-radius: 6px;
-      width: 100%;
-      background-color: #1e94e2;
-      padding: 15px;
-      color: $white;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-  }
 }
+
+.section--feature-2 {
+    @extend .section;
+    background-color: #1b1919;
+    color: $white;
+}
+
 
 
 /*
 *
-* authorization section */
-
-.section-auth {
-  height: 45%;
-  width: 40%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-
-  button {
-      border: none;
-      border-radius: 25px;
-      padding: 5px 10px;
-      background-color: $bg-button;
-      color: $white;
-      font-size: 1em;
-      margin-top: 25px;
-  }
-
-  video {
-    border-radius: 50%;
-  }
-
-  .picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .information {
-    @extend .picture;
-
-    input {
-      padding: 5px;
-      margin: 5px;
-    }
-  }
-
-  form {
-    height: 100%;
-  }
-}
-
-
-// .section-login {
-//   @extend .section-auth;
-//   display: flex;
-//   .picture {
-//     width: 50%;
-//   }
-//
-//   .instructions {
-//     width: 50%;
-//     border: 1px solid black;
-//
-//     h2 {
-//       margin-left: 21%;
-//     }
-//
-//     hr {
-//       width: 60%;
-//     }
-//
-//     li {
-//       margin-left: 20%;
-//       // list-style: none;
-//       padding: 5px;
-//     }
-//   }
-// }
-
-.section-register {
-  @extend .section-auth;
-
-  .information .submit-hidden {
-    display: none;
-  }
-}
-
-.footer {
-  height: 80px;
-  background-color: #f5f5f5;
+* service section */
+.section--service {
+    @extend .section;
+    height: 50vh !important;
+    text-align: center;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 0.1px, transparent 1px, transparent 100%);
+    background-size: 15px 15px;
 }
