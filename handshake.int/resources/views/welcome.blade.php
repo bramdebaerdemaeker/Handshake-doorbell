@@ -9,28 +9,30 @@
     <div class="container">
 
       <!-- section 1 -->
-      <div class="section">
-        <div class="section__content animation-element animation-element--slide-left">
-          <div class="section__content__title">
-            <h2><span>A faster, safer</span> </br> way to sign in.</h2>
-          </div>
-          <div class="section__content__body">
-            <p>
-              Meet the latest new way to sign in on all of your favorite platforms.
-              Forget about card readers, batches and fingerprint sensors, Shakure brings back the fun in a daily routine as "sign in".
-            </p>
-            <p>
-              Shakure is made to get rid of all of your time waisting login - type moments
-              and replace it with a way of authenticating that you'll never forget.
+      <div class="section--feature-1">
+        <div class="section__bg-image">
+          <div class="section__content animation-element animation-element--slide-left">
+            <div class="section__content__title">
+              <h2><span>A faster, safer</span> </br> way to sign in.</h2>
+            </div>
+            <div class="section__content__body">
+              <p>
+                Meet the latest new way to sign in on all of your favorite platforms.
+                Forget about card readers, batches and fingerprint sensors, Shakure brings back the fun in a daily routine as "sign in".
+              </p>
+              <p>
+                Shakure is made to get rid of all of your time waisting login - type moments
+                and replace it with a way of authenticating that you'll never forget.
 
-          </p>
-            <p>
-              It's all the security of two - factor authentication, but all the convenience of Shakure.
             </p>
+              <p>
+                It's all the security of two - factor authentication, but all the convenience of Shakure.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="section__img">
-          <img src="http://placehold.it/400x450">
+          <div class="section__img">
+            <!-- <img src="http://placehold.it/400x450"> -->
+          </div>
         </div>
       </div>
 
@@ -42,7 +44,7 @@
         </div>
 
         <div class="section__content animation-element animation-element--slide-right">
-          <div class="section__content__title--inverted">
+          <div class="section__content__title">
             <h2><span>No keys </br> No touch</span> </br> Just signing in.</h2>
           </div>
           <div class="section__content__body">
@@ -62,27 +64,13 @@
 
       <!-- section 3 -->
       <div class="section--feature-3">
-        <div class="section__content animation-element animation-element--slide-left">
+        <div class="section__content">
           <div class="section__content__title">
-            <h2><span>A faster, safer</span> </br> way to sign in.</h2>
-          </div>
-          <div class="section__content__body">
-            <p>
-              Meet the latest new way to sign in on all of your favorite platforms.
-              Forget about card readers, batches and fingerprint sensors, Shakure brings back the fun in a daily routine as "sign in".
-            </p>
-            <p>
-              Shakure is made to get rid of all of your time waisting login - type moments
-              and replace it with a way of authenticating that you'll never forget.
-
-          </p>
-            <p>
-              It's all the security of two - factor authentication, but all the convenience of Shakure.
-            </p>
+            <h2>Watch </br><span>and be convinced.</span></h2>
           </div>
         </div>
         <div class="section__img">
-          <img src="http://placehold.it/400x450">
+          <img src="http://placehold.it/800x450">
         </div>
       </div>
 
@@ -106,8 +94,8 @@
       <div class="section--service">
         <div class="">
           <h1>Shakure services</h1>
-          <p>Now. Are you interested in safe and fast, enjoying </br> your sign in process again? Just give it a try. </br> It's free</p>
-            <a href="register"><button type="button" name="button" class="uppercase section__button">try it now</button></a>
+          <p>Now. Are you interested in a safe and fast, enjoyable </br> sign in process again? Just give it a try. </br> It's free</p>
+            <a href="register"><button type="button" name="button" class="uppercase btn--section-service">try it now</button></a>
         </div>
 
       </div>

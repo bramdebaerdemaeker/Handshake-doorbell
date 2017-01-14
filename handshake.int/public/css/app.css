@@ -18,13 +18,19 @@
 * navbar */
 /*
 *
-* section1 */
+* langings page */
+/*
+*
+* section 1 */
 /*
 *
 * section2 */
 /*
 *
-* section3 */
+* section service */
+/*
+*
+* footer */
 /*
 *
 * mixins */
@@ -38,62 +44,84 @@ body {
 .highlight-color {
   color: #2db2ff; }
 
+.btn-blue, .nav__links .btn--nav, .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service {
+  border: none;
+  background-color: #2db2ff;
+  color: #ffffff; }
+
+/*************
+* navigation *
+**************/
 .nav {
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  min-height: 50px;
+  height: 70px;
   color: #000000;
   background-color: #ffffff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-  .nav .logo {
-    font-family: avenir-bold; }
-    .nav .logo a {
+
+.nav__brand {
+  display: flex; }
+  .nav__brand .nav__brand__logo img {
+    width: 160px;
+    height: 100%; }
+  .nav__brand .nav__brand__name {
+    align-self: center;
+    margin-left: -20px; }
+    .nav__brand .nav__brand__name a {
+      font-family: avenir-bold;
       text-decoration: none;
       color: #000000; }
-  .nav .buy {
-    border: none;
-    background-color: #2db2ff;
+
+.nav__links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%; }
+  .nav__links a,
+  .nav__links a:visited {
+    color: #000000;
+    padding: 0 7px;
+    text-decoration: none;
+    align-self: center;
+    line-height: 70px;
+    position: relative; }
+    .nav__links a:nth-child(-n+3):before,
+    .nav__links a:visited:nth-child(-n+3):before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      background-color: #2db2ff;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s; }
+  .nav__links a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  .nav__links .btn--nav {
     border-radius: 10px;
-    padding: 6px 15px;
-    color: #ffffff; }
-  .nav .nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 30%; }
-    .nav .nav-links a,
-    .nav .nav-links a:hover,
-    .nav .nav-links a:visited {
-      color: #000000;
-      text-decoration: none;
-      align-self: center; }
+    padding: 6px 15px; }
 
 /****************
 * landings page *
 *****************/
 .home {
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   position: relative;
-  background: url("http://placehold.it/1920x1200") no-repeat center;
+  background: url("/img/home.jpg") no-repeat center;
+  background-size: cover;
   display: flex;
   align-items: center; }
-  .home::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: inherit;
-    z-index: -1;
-    bottom: 0;
-    transform-origin: right bottom;
-    -webkit-transform: skewY(-3deg);
-    -moz-transform: skewY(-3deg);
-    -ms-transform: skewY(-3deg);
-    transform: skewY(-3deg); }
   .home h1 {
     margin-top: 22%;
     margin-left: 15%;
@@ -104,41 +132,67 @@ body {
 /*******************
 * Feature sections *
 ********************/
-.section, .section--feature-2, .section--feature-3, .section--service {
+.section, .section__bg-image, .section--feature-2, .section--feature-3, .section--service {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .section .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content {
+  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img {
     width: 500px;
     height: 400px; }
-  .section .section__content__title, .section--feature-2 .section__content__title, .section--feature-3 .section__content__title, .section--service .section__content__title, .section .section__content__title--inverted, .section--feature-2 .section__content__title--inverted, .section--feature-3 .section__content__title--inverted, .section--service .section__content__title--inverted {
+  .section .section__content__title, .section__bg-image .section__content__title, .section--feature-2 .section__content__title, .section--feature-3 .section__content__title, .section--service .section__content__title, .section .section__content__title--inverted, .section__bg-image .section__content__title--inverted, .section--feature-2 .section__content__title--inverted, .section--feature-3 .section__content__title--inverted, .section--service .section__content__title--inverted {
     font-family: avenir-regular;
     font-size: 1.4em;
     line-height: 130%;
     letter-spacing: 2px; }
-    .section .section__content__title span, .section--feature-2 .section__content__title span, .section--feature-3 .section__content__title span, .section--service .section__content__title span, .section .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span {
+    .section .section__content__title span, .section__bg-image .section__content__title span, .section--feature-2 .section__content__title span, .section--feature-3 .section__content__title span, .section--service .section__content__title span, .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span {
       opacity: 0.3; }
-  .section .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span {
+  .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span {
     opacity: 0.5; }
-  .section .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content,
+  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img,
   .section .section__img,
+  .section__bg-image .section__img,
   .section--feature-2 .section__img,
   .section--feature-3 .section__img,
   .section--service .section__img {
     margin: 70px; }
-  .section .section__button, .section--feature-2 .section__button, .section--feature-3 .section__button, .section--service .section__button {
-    border: none;
+  .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service {
     border-radius: 25px;
     padding: 10px 15px;
-    background-color: #2db2ff;
-    color: #ffffff;
     font-size: 1em; }
+
+.section--feature-1 {
+  position: relative;
+  background: #ffffff;
+  z-index: 10; }
+  .section--feature-1::before, .section--feature-1::after {
+    content: '';
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .section--feature-1::before {
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(-3deg); }
+
+.section__bg-image {
+  background-image: url("/img/macbook.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 .section--feature-2 {
   background-color: #1b1919;
   color: #ffffff; }
+
+.section--feature-3 {
+  flex-direction: column; }
+  .section--feature-3 .section__content__title, .section--feature-3 .section__content__title--inverted {
+    text-align: center; }
 
 .section--count {
   height: 25vh;
@@ -168,7 +222,7 @@ body {
 .section-contact {
   flex-direction: column; }
   .section-contact .contact-image {
-    background: url("http://placehold.it/1920x1200") no-repeat center;
+    background: url("/img/home.jpg") no-repeat center;
     height: 50%;
     width: 100%;
     display: flex;
@@ -249,7 +303,12 @@ body {
 * footer */
 .footer {
   height: 80px;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .footer .footer__left {
+    text-align: center; }
 
 .animation-element, .animation-element--slide-left, .animation-element--slide-right, .animation-element--slide-up {
   position: relative;

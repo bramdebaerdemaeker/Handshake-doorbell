@@ -24,6 +24,7 @@
         }
 
     }
+
     .section__content__title--inverted {
         @extend .section__content__title;
         span {
@@ -34,18 +35,34 @@
     .section__content,
     .section__img {
         margin: 70px;
+
     }
 
-    .section__button {
-        border: none;
+    .btn--section-service {
+        @extend .btn-blue;
         border-radius: 25px;
         padding: 10px 15px;
-        background-color: $bg-button;
-        color: $white;
         font-size: 1em;
     }
 
 
+}
+
+.section--feature-1 {
+  @include angle-edge(topright, 3deg);
+  z-index:10;
+
+  .section__img {
+    @extend .section__content;
+  }
+}
+
+.section__bg-image {
+  @extend .section;
+  background-image: $bg-feature-1;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .section--feature-2 {
@@ -56,6 +73,11 @@
 
 .section--feature-3 {
   @extend .section;
+  flex-direction: column;
+
+  .section__content__title{
+    text-align: center;
+  }
 }
 
 .section--count {
