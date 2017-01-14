@@ -44,10 +44,6 @@
             <h2>Become a member </h2>
 
             <input type="hidden" id="photo" name="photo">
-            @if ($errors->has('email'))
-                <strong>Zet je camera aan!</strong>
-              </span>
-            @endif
 
             <input type="text" name="email" placeholder="Email">
             @if ($errors->has('email'))

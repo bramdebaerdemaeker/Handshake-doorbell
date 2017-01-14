@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Libraries\Kairos as Kairos;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -38,31 +39,41 @@ class RegisterController extends Controller
         $email = $request->input('email');
         $name = $request->input('name');
         $this->validator($request->all())->validate();
+
         $img = substr($image, 1+strrpos($image, ','));
 
         $Kairos = new Kairos("fffb0acd","ecef1039e93e6d353f9180fc97ce6360");
         $gallery = 'gallery';
         $argumentArray = array(
             "image" => $img,
+            "subject_id" => $name,
             "gallery_name" => $gallery
         );
 
-        $response = $Kairos->recognize($argumentArray);
-        dd($response);
-
+        $response = $Kairos->enroll($argumentArray);
 
         file_put_contents(public_path() . "/img/". $name. '.png', base64_decode($img));
         $link = "/img/". $name. '.png';
         $user = $this->create(["email" => $email, "name" => $name]);
         $user->image_link = $link;
+        $user->registration_complete = false;
         $user->save();
+
+        $this->guard()->login($user);
+
+        if($user && $response){
+            return view('gestures');
+        }
     }
 
     public function gestures(){
         return view('gestures');
     }
 
-
+    protected function guard()
+    {
+        return Auth::guard();
+    }
 
     /**
      * Create a new controller instance.

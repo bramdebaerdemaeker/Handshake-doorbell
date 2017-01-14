@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->json('gesture1')->nullable();
             $table->json('gesture2')->nullable();
             $table->json('gesture3')->nullable();
+            $table->boolean('registration_complete')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

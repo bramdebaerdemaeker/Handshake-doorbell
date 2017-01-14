@@ -84,6 +84,10 @@ jQuery(document).ready(function ($) {
         wegGlWarning		= $('#webgl-warning'),
         versionTag			= $('#version-tag'),
         count 				= 0,
+        gesture1            = $('#gesture1'),
+        gesture2            = $('#gesture2'),
+        gesture3            = $('#gesture3'),
+        gesturesubmit       = $('#gesturesubmit'),
 
         /*
          * We set up the WebGL renderer - switching to a canvas renderer if needed
@@ -287,12 +291,20 @@ jQuery(document).ready(function ($) {
             name = "gesture3";
             count += 1;
         }
+        else if(count == 3){
+            gesture1.val(trainer.toJSON('gesture1'));
+            gesture2.val(trainer.toJSON('gesture2'));
+            gesture3.val(trainer.toJSON('gesture3'));
+            console.log(trainer.toJSON('gesture1'));
+            console.log(trainer.toJSON('gesture2'));
+            console.log(trainer.toJSON('gesture3'));
+            gesturesubmit.click();
+        }
         /*
          * If the input name is empty, the default on the box, or already exists in the list of existing gestures, we just do nothing and return.
          *
          * TODO: Some sort of feedback on what happened here would be nice.
          */
-        if (name.length == 0 || trainer.gestures[name] != null) { return false; }
 
         /*
          * And then we create the new gesture in the trainer and return false to prevent the form submission event propagating.
@@ -300,7 +312,6 @@ jQuery(document).ready(function ($) {
          * The gesture name is upper-cased for uniformity (TODO: This shouldn't really be a requirement).
          */
         trainer.create(name, false);
-        console.log(trainer.gestures);
         return false;
     });
 

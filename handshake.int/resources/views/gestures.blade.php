@@ -18,7 +18,13 @@
         <div id="overlay-shade"></div>
 
     </div>
-
+    <form action="/saveGestures" method="post">
+        {{ csrf_field() }}
+        <input type="hidden" id="gesture1" name="gesture1">
+        <input type="hidden" id="gesture2" name="gesture2">
+        <input type="hidden" id="gesture3" name="gesture3">
+        <input type="submit" id="gesturesubmit">
+    </form>
     <script src="/js/leaptrainer/trainer-ui/js/jquery.min.js"></script>
     <script src="/js/leaptrainer/trainer-ui/js/jquery.touchwipe.min.js"></script>
 

@@ -144,7 +144,7 @@ LeapTrainer.Controller = Class.extend({
     hitThreshold			: 0.80,	// The correlation output value above which a gesture is considered recognized. Raise this to make matching more strict
 
     trainingCountdown		: 3,	// The number of seconds after startTraining is called that training begins. This number of 'training-countdown' events will be emit.
-    trainingGestures		: 5,	// The number of gestures samples that collected during training
+    trainingGestures		: 2,	// The number of gestures samples that collected during training
     convolutionFactor		: 0,	// The factor by which training samples will be convolved over a gaussian distribution to expand the available training data
 
     downtime				: 1000,	// The number of milliseconds after a gesture is identified before another gesture recording cycle can begin
