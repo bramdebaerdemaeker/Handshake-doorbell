@@ -31,7 +31,7 @@
 
       <!-- section 1 -->
       <div class="section">
-        <div class="section__content">
+        <div class="section__content animation-element animation-element--slide-left">
           <div class="section__content__title">
             <h2><span>A faster, safer</span> </br> way to sign in.</h2>
           </div>
@@ -58,11 +58,11 @@
       <!-- section 2 -->
       <div class="section--feature-2">
 
-        <div class="section__img">
+        <div class="section__img animation-element animation-element--slide-up">
           <img src="http://placehold.it/400x450">
         </div>
 
-        <div class="section__content">
+        <div class="section__content animation-element animation-element--slide-right">
           <div class="section__content__title--inverted">
             <h2><span>No keys </br> No touch</span> </br> Just signing in.</h2>
           </div>

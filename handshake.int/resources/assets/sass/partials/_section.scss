@@ -8,6 +8,11 @@
     justify-content: center;
     align-items: center;
 
+    .section__content {
+        width: 500px;
+        height: 400px;
+    }
+
     .section__content__title {
         font-family: avenir-regular;
         font-size: 1.4em;
@@ -26,11 +31,6 @@
         }
     }
 
-    .section__content {
-        width: 500px;
-        height: 400px;
-    }
-
     .section__content,
     .section__img {
         margin: 70px;
@@ -44,6 +44,8 @@
         color: $white;
         font-size: 1em;
     }
+
+
 }
 
 .section--feature-2 {
@@ -61,6 +63,6 @@
     @extend .section;
     height: 50vh !important;
     text-align: center;
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.1), rgba(0,0,0,.1) 0.1px, transparent 1px, transparent 100%);
+    background-image: $bg-pattern;
     background-size: 15px 15px;
 }

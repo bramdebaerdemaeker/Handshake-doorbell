@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Handshake - login differently</title>
-
+    @yield('meta')
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
@@ -33,7 +33,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/count.js"></script>
     <script type="text/javascript" src="js/auth.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
