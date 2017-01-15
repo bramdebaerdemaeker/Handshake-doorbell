@@ -62,7 +62,7 @@ class RegisterController extends Controller
         $this->guard()->login($user);
 
         if($user && $response){
-            return view('gestures');
+            return view('gestures')->with('data', '');
         }
     }
 

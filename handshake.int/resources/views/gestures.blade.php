@@ -43,10 +43,14 @@
     <script src="/js/leaptrainer/leaptrainer-ui.js"></script>
     <script src="/js/leaptrainer/gestureController.js"></script>
     @if($data != null)
+
         <script type="javascript">
-            trainer.fromJSON($data[0]);
-            trainer.fromJSON($data[1]);
-            trainer.fromJSON($data[2]);
+            $(document).ready(function () {
+                var trainer = new LeapTrainer.Controller();
+                trainer.fromJSON('{!! $data[0] !!}');
+                trainer.fromJSON('{!! $data[1] !!}');
+                trainer.fromJSON('{!! $data[2] !!}');
+            });
         </script>
     @endif
 @endsection
