@@ -41,18 +41,15 @@
     <script src="/js/leaptrainer/sub-classes/lib/brain.js"></script>
     <script src="/js/leaptrainer/sub-classes/neural-networks.js"></script>
     <script src="/js/leaptrainer/sub-classes/cross-correlation.js"></script>
-
+    <script type="text/javascript">
+        window.onload = function () {
+            var controller = new Leap.Controller();
+            var trainer = new LeapTrainer.Controller({controller: controller});
+            trainer.fromJSON('{!! $data[0] !!}');
+            trainer.fromJSON('{!! $data[1] !!}');
+            trainer.fromJSON('{!! $data[2] !!}');
+        };
+    </script>
     <script src="/js/leaptrainer/leaptrainer-ui.js"></script>
-    <script src="/js/leaptrainer/gestureController.js"></script>
-    @if($data != null)
 
-        <script type="javascript">
-            $(document).ready(function () {
-                var trainer = new LeapTrainer.Controller();
-                trainer.fromJSON('{!! $data[0] !!}');
-                trainer.fromJSON('{!! $data[1] !!}');
-                trainer.fromJSON('{!! $data[2] !!}');
-            });
-        </script>
-    @endif
 @endsection

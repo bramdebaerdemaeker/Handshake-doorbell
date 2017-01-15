@@ -295,9 +295,6 @@ jQuery(document).ready(function ($) {
             gesture1.val(trainer.toJSON('gesture1'));
             gesture2.val(trainer.toJSON('gesture2'));
             gesture3.val(trainer.toJSON('gesture3'));
-            console.log(trainer.toJSON('gesture1'));
-            console.log(trainer.toJSON('gesture2'));
-            console.log(trainer.toJSON('gesture3'));
             gesturesubmit.click();
         }
         /*
@@ -404,7 +401,7 @@ jQuery(document).ready(function ($) {
         renderGesture();
 
         var remaining = (trainingGestures - trainingSet.length);
-    console.log(gestureName);
+        console.log(gestureName);
         setOutputText('Perform the ' + gestureName + ' gesture ' + (remaining == 1 ? ' once more' : remaining + ' more times'));
     });
 

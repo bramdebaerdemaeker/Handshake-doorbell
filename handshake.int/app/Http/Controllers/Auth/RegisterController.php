@@ -112,6 +112,6 @@ class RegisterController extends Controller
     }
 
     public function gestures(){
-      return view ('gestures');
+      return view ('gestures')->with('data', '');
     }
 }
