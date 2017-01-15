@@ -32,7 +32,8 @@
     <div class="section-auth--register">
       <form method="POST" action="{{ url('/login') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
-
+        <input type="hidden" id="photo" name="photo">
+          <input id="submit" type="submit" class="submit-hidden">
         <!-- face recognition -->
           <div class="section-auth__picture">
             <h2>Show us your beautiful smile</h2>

@@ -89,6 +89,7 @@ jQuery(document).ready(function ($) {
         gesture3            = $('#gesture3'),
         gesturesubmit       = $('#gesturesubmit'),
         gestureCounter      = 0,
+        loginSubmit         = $('#loginSubmit'),
 
         /*
          * We set up the WebGL renderer - switching to a canvas renderer if needed
@@ -359,7 +360,7 @@ jQuery(document).ready(function ($) {
     }
 
     function gestureCount() {
-        gestureCounter =+ 1;
+        gestureCounter += 1;
     }
     /*
      * ------------------------------------------------------------------------------------------
@@ -433,13 +434,17 @@ jQuery(document).ready(function ($) {
         renderGesture();
         if(trainer.hasData() == true){
             if(gestureCounter == 0){
-                trainer.on('gesture1', gestureCount());
+                console.log('1');
+                trainer.on('gesture1', gestureCount);
             }
             else if(gestureCounter == 1){
-                trainer.on('gesture2', gestureCount());
+                console.log('2');
+                trainer.on('gesture2', gestureCount);
             }
             else if(gestureCounter == 2) {
-                trainer.on('gesture3', gestureCount());
+                console.log('3');
+                trainer.on('gesture3', gestureCount);
+                loginSubmit.click();
             }
         }
         var hitPercentage = Math.min(parseInt(100 * hit), 100);

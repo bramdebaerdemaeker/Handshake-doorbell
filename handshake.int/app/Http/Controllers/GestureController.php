@@ -27,4 +27,9 @@ class GestureController extends Controller
             return redirect('/gestures')->withErrors($validator);
         }
     }
+
+    public function checkGestures(Request $request){
+        $user = Auth::user;
+        return redirect('/');
+    }
 }

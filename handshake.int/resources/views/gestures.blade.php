@@ -52,6 +52,10 @@
                 trainer.hasAll();
             };
         </script>
+        <form method="post" action="/checkGestures">
+            {{ csrf_field() }}
+            <input type="submit" id="loginSubmit">
+        </form>
     @endif
 
 
