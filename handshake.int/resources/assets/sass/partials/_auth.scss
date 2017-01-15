@@ -1,75 +1,127 @@
 /*
 *
 * authorization section */
+
+.section--authorization {
+  @extend .section;
+  background-color:#2a363f;
+}
+
+.section--authorization__brand {
+  width: 40%;
+  color: $white;
+  display: flex;
+  justify-content: space-around;
+
+  .section--authorization__brand__img {
+    height: 100px;
+    width: 50%;
+    background-image: url('/img/logo.png');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .section--authorization__brand__title {
+    width: 50%;
+    height: 100px;
+    font-size: 1.3em;
+    margin: 0;
+    margin-left: -85px;
+
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
+
+
 .section-auth {
-    height: 45%;
+    height: 35%;
     width: 40%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
-    button {
-        border: none;
-        border-radius: 25px;
-        padding: 5px 10px;
-        background-color: $bg-button;
-        color: $white;
-        font-size: 1em;
-        margin-top: 25px;
+    .section-auth__information {
+        @extend .section-auth__picture;
+
+        .section-auth__information_input {
+            padding: 15px;
+            margin: 10px;
+            width: 50%;
+            background-color: transparent;
+            border-radius: 5px;
+            border: 1px solid #3d4750;
+            font-family: museo;
+            font-size: 1em;
+            color: $white;
+
+            &:focus {
+              border-color: $bg-button;
+            }
+        }
+
+        .submit-hidden {
+          display: none;
+        }
     }
 
-    video {
-        border-radius: 50%;
-    }
-
-    .picture {
+    .section-auth__picture {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         height: 100%;
+
+        #video {
+          border-radius: 200px;
+        }
+
+        h2 {
+          color: $white;
+        }
+
+        .hide-picture {
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          border-radius: 50%;
+          background-color: $bg-button;
+          cursor: pointer;
+          opacity: .9;
+
+          &:hover {
+            opacity: 1;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          }
+
+          i {
+            color: $white;
+          }
+
+        }
     }
 
-    .information {
-        @extend .picture;
-
-        input {
-            padding: 5px;
-            margin: 5px;
-        }
+    .section-auth__button {
+        border: none;
+        width: 55%;
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: $bg-button;
+        color: $white;
+        font-size: 1em;
+        margin-top: 25px;
+        font-family: museo;
     }
 
     form {
         height: 100%;
     }
 }
-// .section-login {
-//   @extend .section-auth;
-//   display: flex;
-//   .picture {
-//     width: 50%;
-//   }
-//
-//   .instructions {
-//     width: 50%;
-//     border: 1px solid black;
-//
-//     h2 {
-//       margin-left: 21%;
-//     }
-//
-//     hr {
-//       width: 60%;
-//     }
-//
-//     li {
-//       margin-left: 20%;
-//       // list-style: none;
-//       padding: 5px;
-//     }
-//   }
-// }
 
-.section-register {
+.section-auth--register {
     @extend .section-auth;
+    border-left: 1px solid #3d4750;
 
     .information .submit-hidden {
         display: none;

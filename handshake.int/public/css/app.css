@@ -47,7 +47,7 @@ body {
 .highlight-color {
   color: #2db2ff; }
 
-.btn-blue, .nav__links .btn--nav, .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service, .section--coming-soon .btn--section-service, .section--contact .btn--section-service {
+.btn-blue, .nav__links .btn--nav, .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service, .section--coming-soon .btn--section-service, .section--contact .btn--section-service, .section--authorization .btn--section-service {
   border: none;
   background-color: #2db2ff;
   color: #ffffff; }
@@ -137,34 +137,35 @@ body {
 /*******************
 * Feature sections *
 ********************/
-.section, .section__bg-image, .section--feature-2, .section--feature-3, .section--service, .section--coming-soon, .section--contact {
+.section, .section__bg-image, .section--feature-2, .section--feature-3, .section--service, .section--coming-soon, .section--contact, .section--authorization {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section--coming-soon .section__content, .section--contact .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img, .section--coming-soon .section--feature-1 .section__img, .section--feature-1 .section--coming-soon .section__img, .section--contact .section--feature-1 .section__img, .section--feature-1 .section--contact .section__img {
+  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section--coming-soon .section__content, .section--contact .section__content, .section--authorization .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img, .section--coming-soon .section--feature-1 .section__img, .section--feature-1 .section--coming-soon .section__img, .section--contact .section--feature-1 .section__img, .section--feature-1 .section--contact .section__img, .section--authorization .section--feature-1 .section__img, .section--feature-1 .section--authorization .section__img {
     width: 500px;
     height: 400px; }
-  .section .section__content__title, .section__bg-image .section__content__title, .section--feature-2 .section__content__title, .section--feature-3 .section__content__title, .section--service .section__content__title, .section--coming-soon .section__content__title, .section--contact .section__content__title, .section .section__content__title--inverted, .section__bg-image .section__content__title--inverted, .section--feature-2 .section__content__title--inverted, .section--feature-3 .section__content__title--inverted, .section--service .section__content__title--inverted, .section--coming-soon .section__content__title--inverted, .section--contact .section__content__title--inverted {
+  .section .section__content__title, .section__bg-image .section__content__title, .section--feature-2 .section__content__title, .section--feature-3 .section__content__title, .section--service .section__content__title, .section--coming-soon .section__content__title, .section--contact .section__content__title, .section--authorization .section__content__title, .section .section__content__title--inverted, .section__bg-image .section__content__title--inverted, .section--feature-2 .section__content__title--inverted, .section--feature-3 .section__content__title--inverted, .section--service .section__content__title--inverted, .section--coming-soon .section__content__title--inverted, .section--contact .section__content__title--inverted, .section--authorization .section__content__title--inverted {
     font-family: avenir-regular;
     font-size: 1.4em;
     line-height: 130%;
     letter-spacing: 2px; }
-    .section .section__content__title span, .section__bg-image .section__content__title span, .section--feature-2 .section__content__title span, .section--feature-3 .section__content__title span, .section--service .section__content__title span, .section--coming-soon .section__content__title span, .section--contact .section__content__title span, .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span, .section--coming-soon .section__content__title--inverted span, .section--contact .section__content__title--inverted span {
+    .section .section__content__title span, .section__bg-image .section__content__title span, .section--feature-2 .section__content__title span, .section--feature-3 .section__content__title span, .section--service .section__content__title span, .section--coming-soon .section__content__title span, .section--contact .section__content__title span, .section--authorization .section__content__title span, .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span, .section--coming-soon .section__content__title--inverted span, .section--contact .section__content__title--inverted span, .section--authorization .section__content__title--inverted span {
       opacity: 0.3; }
-  .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span, .section--coming-soon .section__content__title--inverted span, .section--contact .section__content__title--inverted span {
+  .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span, .section--coming-soon .section__content__title--inverted span, .section--contact .section__content__title--inverted span, .section--authorization .section__content__title--inverted span {
     opacity: 0.5; }
-  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section--coming-soon .section__content, .section--contact .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img, .section--coming-soon .section--feature-1 .section__img, .section--feature-1 .section--coming-soon .section__img, .section--contact .section--feature-1 .section__img, .section--feature-1 .section--contact .section__img,
+  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section--coming-soon .section__content, .section--contact .section__content, .section--authorization .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img, .section--coming-soon .section--feature-1 .section__img, .section--feature-1 .section--coming-soon .section__img, .section--contact .section--feature-1 .section__img, .section--feature-1 .section--contact .section__img, .section--authorization .section--feature-1 .section__img, .section--feature-1 .section--authorization .section__img,
   .section .section__img,
   .section__bg-image .section__img,
   .section--feature-2 .section__img,
   .section--feature-3 .section__img,
   .section--service .section__img,
   .section--coming-soon .section__img,
-  .section--contact .section__img {
+  .section--contact .section__img,
+  .section--authorization .section__img {
     margin: 70px; }
-  .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service, .section--coming-soon .btn--section-service, .section--contact .btn--section-service {
+  .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service, .section--coming-soon .btn--section-service, .section--contact .btn--section-service, .section--authorization .btn--section-service {
     border-radius: 25px;
     padding: 10px 15px;
     font-size: 1em; }
@@ -243,7 +244,10 @@ body {
     -webkit-filter: grayscale(0.6); }
 
 .section--contact {
-  justify-content: space-between; }
+  justify-content: space-between;
+  /* Form opened styles */
+  /* Form closed styles */
+  /* ok mes */ }
   .section--contact .section--contact__content {
     border: 1px solid #000000;
     position: relative;
@@ -258,120 +262,104 @@ body {
       padding-right: 15px; }
     .section--contact .section--contact__content .section--contact__content__body {
       padding: 50px 80px 30px 40px; }
-
-/* Form opened styles */
-.form.active {
-  position: absolute;
-  padding: 24px;
-  left: 100%;
-  box-shadow: 0 30px 20px -20px rgba(0, 0, 0, 0.3);
-  width: 320px;
-  height: 380px;
-  -webkit-animation: openForm 1.4s;
-  -webkit-animation-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.9);
-  animation: openForm 1.4s;
-  animation-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.9); }
-  .form.active h2 {
-    width: 100%;
+  .section--contact .form.active {
+    position: absolute;
+    padding: 24px;
+    left: 100%;
+    box-shadow: 0 30px 20px -20px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    height: 380px;
+    -webkit-animation: openForm 1.4s;
+    -webkit-animation-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.9);
+    animation: openForm 1.4s;
+    animation-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.9); }
+    .section--contact .form.active h2 {
+      width: 100%;
+      text-align: center;
+      color: #ffffff; }
+  .section--contact .form.active * {
+    opacity: 1; }
+  .section--contact .submit {
+    position: absolute;
+    height: auto;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 15px;
     text-align: center;
-    color: #ffffff; }
-
-.form.active * {
-  opacity: 1; }
-
-.submit {
-  position: absolute;
-  height: auto;
-  bottom: -15px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  padding: 15px;
-  text-align: center;
-  background: #ffffff;
-  cursor: pointer;
-  text-transform: uppercase;
-  color: #2db2ff;
-  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 0 0 rgba(0, 0, 0, 0.5) inset;
-  -webkit-transition: all 1.1s 1s ease;
-  transition: all 1.1s 1s ease; }
-
-input,
-textarea {
-  width: 80%;
-  border: none;
-  padding: 10px;
-  background: #fefefe;
-  margin: 10px; }
-
-input {
-  -webkit-transition: all 0.5s 1s ease;
-  transition: all 0.5s 1s ease; }
-
-textarea {
-  opacity: 1;
-  max-height: 100px;
-  -webkit-transition: all 0.9s 1s ease;
-  transition: all 0.9s 1s ease; }
-
-/* Form closed styles */
-.form {
-  width: 64px;
-  height: 64px;
-  background: #0f1c24;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  float: right;
-  margin-right: -30px;
-  margin-top: -90px; }
-  .form:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-
-.form * {
-  opacity: 0;
-  cursor: pointer; }
-
-/* ok mes */
-.ok_message {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -32px;
-  margin-top: -32px;
-  width: 64px;
-  height: 64px;
-  background: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  z-index: 100;
-  -webkit-transform: scale(0, 0) rotate(-90deg);
-  transform: scale(0, 0) rotate(-90deg);
-  -webkit-transition: all 0.5s 0.3s cubic-bezier(0.9, 0.1, 0.1, 0.9);
-  transition: all 0.5s 0.3s cubic-bezier(0.9, 0.1, 0.1, 0.9);
-  line-height: 64px;
-  text-align: center;
-  cursor: pointer; }
-
-.ok_message span {
-  text-transform: uppercase;
-  font-size: 16px;
-  color: #2db2ff;
-  opacity: 0;
-  -webkit-transform: scale(0.2, 0.2);
-  transform: scale(0.2, 0.2);
-  -webkit-transition: all 0.6s 0.4s ease;
-  transition: all 0.6s 0.4s ease; }
-
-.ok_message.active {
-  width: 320px;
-  margin-left: -160px;
-  -webkit-transform: scale(1, 1) rotate(0deg);
-  transform: scale(1, 1) rotate(0deg); }
-
-.ok_message.active span {
-  opacity: 1;
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-  left: 0; }
-
+    background: #ffffff;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #2db2ff;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 0 0 rgba(0, 0, 0, 0.5) inset;
+    -webkit-transition: all 1.1s 1s ease;
+    transition: all 1.1s 1s ease; }
+  .section--contact input,
+  .section--contact textarea {
+    width: 80%;
+    border: none;
+    padding: 10px;
+    background: #fefefe;
+    margin: 10px; }
+  .section--contact input {
+    -webkit-transition: all 0.5s 1s ease;
+    transition: all 0.5s 1s ease; }
+  .section--contact textarea {
+    opacity: 1;
+    max-height: 100px;
+    -webkit-transition: all 0.9s 1s ease;
+    transition: all 0.9s 1s ease; }
+  .section--contact .form {
+    width: 64px;
+    height: 64px;
+    background: #0f1c24;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    float: right;
+    margin-right: -30px;
+    margin-top: -90px; }
+    .section--contact .form:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .section--contact .form * {
+    opacity: 0;
+    cursor: pointer; }
+  .section--contact .ok_message {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32px;
+    margin-top: -32px;
+    width: 64px;
+    height: 64px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 100;
+    -webkit-transform: scale(0, 0) rotate(-90deg);
+    transform: scale(0, 0) rotate(-90deg);
+    -webkit-transition: all 0.5s 0.3s cubic-bezier(0.9, 0.1, 0.1, 0.9);
+    transition: all 0.5s 0.3s cubic-bezier(0.9, 0.1, 0.1, 0.9);
+    line-height: 64px;
+    text-align: center;
+    cursor: pointer; }
+  .section--contact .ok_message span {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #2db2ff;
+    opacity: 0;
+    -webkit-transform: scale(0.2, 0.2);
+    transform: scale(0.2, 0.2);
+    -webkit-transition: all 0.6s 0.4s ease;
+    transition: all 0.6s 0.4s ease; }
+  .section--contact .ok_message.active {
+    width: 320px;
+    margin-left: -160px;
+    -webkit-transform: scale(1, 1) rotate(0deg);
+    transform: scale(1, 1) rotate(0deg); }
+  .section--contact .ok_message.active span {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    left: 0; }
 @keyframes openForm {
   0% {
     width: 64px;
@@ -385,34 +373,89 @@ textarea {
 /*
 *
 * authorization section */
-.section-auth, .section-register {
-  height: 45%;
+.section--authorization {
+  background-color: #2a363f; }
+
+.section--authorization__brand {
   width: 40%;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-  .section-auth button, .section-register button {
-    border: none;
-    border-radius: 25px;
-    padding: 5px 10px;
-    background-color: #2db2ff;
-    color: #ffffff;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around; }
+  .section--authorization__brand .section--authorization__brand__img {
+    height: 100px;
+    width: 50%;
+    background-image: url("/img/logo.png");
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .section--authorization__brand .section--authorization__brand__title {
+    width: 50%;
+    height: 100px;
+    font-size: 1.3em;
+    margin: 0;
+    margin-left: -85px; }
+    .section--authorization__brand .section--authorization__brand__title a {
+      text-decoration: none;
+      color: #ffffff; }
+
+.section-auth, .section-auth--register {
+  height: 35%;
+  width: 40%; }
+  .section-auth .section-auth__information .section-auth__information_input, .section-auth--register .section-auth__information .section-auth__information_input {
+    padding: 15px;
+    margin: 10px;
+    width: 50%;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #3d4750;
+    font-family: museo;
     font-size: 1em;
-    margin-top: 25px; }
-  .section-auth video, .section-register video {
-    border-radius: 50%; }
-  .section-auth .picture, .section-register .picture, .section-auth .information, .section-register .information {
+    color: #ffffff; }
+    .section-auth .section-auth__information .section-auth__information_input:focus, .section-auth--register .section-auth__information .section-auth__information_input:focus {
+      border-color: #2db2ff; }
+  .section-auth .section-auth__information .submit-hidden, .section-auth--register .section-auth__information .submit-hidden {
+    display: none; }
+  .section-auth .section-auth__picture, .section-auth--register .section-auth__picture, .section-auth .section-auth__information, .section-auth--register .section-auth__information {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100%; }
-  .section-auth .information input, .section-register .information input {
-    padding: 5px;
-    margin: 5px; }
-  .section-auth form, .section-register form {
+    .section-auth .section-auth__picture #video, .section-auth--register .section-auth__picture #video, .section-auth .section-auth__information #video, .section-auth--register .section-auth__information #video {
+      border-radius: 200px; }
+    .section-auth .section-auth__picture h2, .section-auth--register .section-auth__picture h2, .section-auth .section-auth__information h2, .section-auth--register .section-auth__information h2 {
+      color: #ffffff; }
+    .section-auth .section-auth__picture .hide-picture, .section-auth--register .section-auth__picture .hide-picture, .section-auth .section-auth__information .hide-picture, .section-auth--register .section-auth__information .hide-picture {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 50%;
+      background-color: #2db2ff;
+      cursor: pointer;
+      opacity: .9; }
+      .section-auth .section-auth__picture .hide-picture:hover, .section-auth--register .section-auth__picture .hide-picture:hover, .section-auth .section-auth__information .hide-picture:hover, .section-auth--register .section-auth__information .hide-picture:hover {
+        opacity: 1;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+      .section-auth .section-auth__picture .hide-picture i, .section-auth--register .section-auth__picture .hide-picture i, .section-auth .section-auth__information .hide-picture i, .section-auth--register .section-auth__information .hide-picture i {
+        color: #ffffff; }
+  .section-auth .section-auth__button, .section-auth--register .section-auth__button {
+    border: none;
+    width: 55%;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2db2ff;
+    color: #ffffff;
+    font-size: 1em;
+    margin-top: 25px;
+    font-family: museo; }
+  .section-auth form, .section-auth--register form {
     height: 100%; }
 
-.section-register .information .submit-hidden {
-  display: none; }
+.section-auth--register {
+  border-left: 1px solid #3d4750; }
+  .section-auth--register .information .submit-hidden {
+    display: none; }
 
 /*
 *

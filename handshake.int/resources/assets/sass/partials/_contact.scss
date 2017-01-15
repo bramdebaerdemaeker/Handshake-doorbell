@@ -23,149 +23,150 @@
       padding: 50px 80px 30px 40px;
     }
   }
-}
-/* Form opened styles */
-.form.active {
-    position: absolute;
-    padding: 24px;
-    left: 100%;
-    box-shadow: $box-shadow-form-active;
-    width: 320px;
-    height: 380px;
-    -webkit-animation: openForm 1.4s;
-    -webkit-animation-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.9);
-    animation: openForm 1.4s;
-    animation-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.9);
+  /* Form opened styles */
+  .form.active {
+      position: absolute;
+      padding: 24px;
+      left: 100%;
+      box-shadow: $box-shadow-form-active;
+      width: 320px;
+      height: 380px;
+      -webkit-animation: openForm 1.4s;
+      -webkit-animation-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.9);
+      animation: openForm 1.4s;
+      animation-timing-function: cubic-bezier(0.9, 0.1, 0.1, 0.9);
 
-    h2 {
-      width: 100%;
+      h2 {
+        width: 100%;
+        text-align: center;
+        color: $white;
+      }
+  }
+
+  .form.active * {
+      opacity: 1;
+  }
+
+  .submit {
+      position: absolute;
+      height: auto;
+      bottom: -15px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      padding: 15px;
       text-align: center;
-      color: $white;
-    }
-}
+      background: $white;
+      cursor: pointer;
+      text-transform: uppercase;
+      color: $bg-button;
+      box-shadow: $box-shadow-form-submit;
+      -webkit-transition: all 1.1s 1s ease;
+      transition: all 1.1s 1s ease;
+  }
 
-.form.active * {
-    opacity: 1;
-}
+  input,
+  textarea {
+      width: 80%;
+      border: none;
+      padding: 10px;
+      background: #fefefe;
+      margin: 10px;
+  }
 
-.submit {
-    position: absolute;
-    height: auto;
-    bottom: -15px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding: 15px;
-    text-align: center;
-    background: $white;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: $bg-button;
-    box-shadow: $box-shadow-form-submit;
-    -webkit-transition: all 1.1s 1s ease;
-    transition: all 1.1s 1s ease;
-}
+  input {
+      -webkit-transition: all 0.5s 1s ease;
+      transition: all 0.5s 1s ease;
+  }
 
-input,
-textarea {
-    width: 80%;
-    border: none;
-    padding: 10px;
-    background: #fefefe;
-    margin: 10px;
-}
+  textarea {
+      opacity: 1;
+      max-height: 100px;
+      -webkit-transition: all 0.9s 1s ease;
+      transition: all 0.9s 1s ease;
+  }
 
-input {
-    -webkit-transition: all 0.5s 1s ease;
-    transition: all 0.5s 1s ease;
-}
+  /* Form closed styles */
+  .form {
+      width: 64px;
+      height: 64px;
+      background: $bg-form;
+      box-shadow: $box-shadow-form;
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      float: right;
+      margin-right: -30px;
+      margin-top: -90px;
 
-textarea {
-    opacity: 1;
-    max-height: 100px;
-    -webkit-transition: all 0.9s 1s ease;
-    transition: all 0.9s 1s ease;
-}
+      &:hover {
+        box-shadow: $box-shadow-form-hover;
+      }
+  }
 
-/* Form closed styles */
-.form {
-    width: 64px;
-    height: 64px;
-    background: $bg-form;
-    box-shadow: $box-shadow-form;
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    float: right;
-    margin-right: -30px;
-    margin-top: -90px;
+  .form * {
+      opacity: 0;
+      cursor: pointer;
+  }
 
-    &:hover {
-      box-shadow: $box-shadow-form-hover;
-    }
-}
+  /* ok mes */
+  .ok_message {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -32px;
+      margin-top: -32px;
+      width: 64px;
+      height: 64px;
+      background: $white;
+      box-shadow: $box-shadow-form;
+      z-index: 100;
+      -webkit-transform: scale(0, 0) rotate(-90deg);
+      transform: scale(0, 0) rotate(-90deg);
+      -webkit-transition: all 0.5s 0.3s cubic-bezier(0.9, 0.1, 0.1, 0.9);
+      transition: all 0.5s 0.3s cubic-bezier(0.9, 0.1, 0.1, 0.9);
+      line-height: 64px;
+      text-align: center;
+      cursor: pointer;
+  }
 
-.form * {
-    opacity: 0;
-    cursor: pointer;
-}
+  .ok_message span {
+      text-transform: uppercase;
+      font-size: 16px;
+      color: $bg-button;
+      opacity: 0;
+      -webkit-transform: scale(0.2, 0.2);
+      transform: scale(0.2, 0.2);
+      -webkit-transition: all 0.6s 0.4s ease;
+      transition: all 0.6s 0.4s ease;
+  }
 
-/* ok mes */
-.ok_message {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -32px;
-    margin-top: -32px;
-    width: 64px;
-    height: 64px;
-    background: $white;
-    box-shadow: $box-shadow-form;
-    z-index: 100;
-    -webkit-transform: scale(0, 0) rotate(-90deg);
-    transform: scale(0, 0) rotate(-90deg);
-    -webkit-transition: all 0.5s 0.3s cubic-bezier(0.9, 0.1, 0.1, 0.9);
-    transition: all 0.5s 0.3s cubic-bezier(0.9, 0.1, 0.1, 0.9);
-    line-height: 64px;
-    text-align: center;
-    cursor: pointer;
-}
+  .ok_message.active {
+      width: 320px;
+      margin-left: -160px;
+      -webkit-transform: scale(1, 1) rotate(0deg);
+      transform: scale(1, 1) rotate(0deg);
+  }
 
-.ok_message span {
-    text-transform: uppercase;
-    font-size: 16px;
-    color: $bg-button;
-    opacity: 0;
-    -webkit-transform: scale(0.2, 0.2);
-    transform: scale(0.2, 0.2);
-    -webkit-transition: all 0.6s 0.4s ease;
-    transition: all 0.6s 0.4s ease;
-}
+  .ok_message.active span {
+      opacity: 1;
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+      left: 0;
+  }
 
-.ok_message.active {
-    width: 320px;
-    margin-left: -160px;
-    -webkit-transform: scale(1, 1) rotate(0deg);
-    transform: scale(1, 1) rotate(0deg);
-}
+  @keyframes openForm {
+      0% {
+          width: 64px;
+          height: 64px;
+      }
 
-.ok_message.active span {
-    opacity: 1;
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-    left: 0;
-}
+      50% {
+          width: 320px;
+          height: 64px;
+      }
 
-@keyframes openForm {
-    0% {
-        width: 64px;
-        height: 64px;
-    }
+      100% {
+          width: 320px;
+          height: 380px;
+      }
+  }
 
-    50% {
-        width: 320px;
-        height: 64px;
-    }
-
-    100% {
-        width: 320px;
-        height: 380px;
-    }
 }
