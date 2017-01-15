@@ -1,0 +1,14 @@
+/*
+*
+* footer */
+.footer {
+    height: 80px;
+    background-color: $bg-footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .footer__left {
+      text-align: center;
+    }
+}

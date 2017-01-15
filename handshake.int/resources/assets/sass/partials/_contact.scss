@@ -1,0 +1,70 @@
+/*
+*
+* contact page */
+
+.section-contact{
+  flex-direction: column;
+
+  .contact-image{
+    background: $bg-section-home no-repeat center;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    h1 {
+  		color: $white;
+  		font-size: 3.2em;
+  		font-family: avenir-bold;
+    }
+  }
+
+  .contact-content{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .form {
+      width: 60%;
+      height: 100%;
+      margin-top: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 55%;
+      margin-top: 20px;
+      margin-left: 25%;
+
+      input,
+      input:-webkit-autofill,
+      textarea {
+        margin-top: 5px;
+        background-color: #dadada !important;
+        border: none;
+        border-radius: 2px;
+        padding: 15px;
+
+      }
+    }
+
+    button {
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      background-color: #1e94e2;
+      padding: 15px;
+      color: $white;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+  }
+}
