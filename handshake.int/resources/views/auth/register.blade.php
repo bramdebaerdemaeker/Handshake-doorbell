@@ -41,12 +41,12 @@
 
         <!-- face recognition -->
           <div class="section-auth__picture">
-            <h2>Face recognition</h2>
+            <h2>Show us your beautiful smile</h2>
             <div class="camera">
                 <video id="video" width="300" height="300">Video stream not available.</video>
             </div>
             <canvas id="canvas"></canvas>
-            <button type="submit" name="button" class="hide-picture" id="startbutton">take picture</button>
+            <button type="submit" name="button" class="hide-picture" id="startbutton"><i class="fa fa-camera fa-2x" aria-hidden="true"></i></button>
           </div>
 
         </form>
