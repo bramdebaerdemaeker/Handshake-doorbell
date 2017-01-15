@@ -50,6 +50,10 @@
           </div>
 
         </form>
+
+        <div class="section-auth__login">
+          <a href="/login">Already an account?</a>
+        </div>
     </div>
 
 </div>

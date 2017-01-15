@@ -101,6 +101,17 @@
         }
     }
 
+    .section-auth__login a {
+      color: $white;
+      text-decoration: none;
+      margin-left: 23%;
+
+      &:hover {
+        color: $bg-button;
+        text-decoration: underline;
+      }
+    }
+
     .section-auth__button {
         border: none;
         width: 55%;
