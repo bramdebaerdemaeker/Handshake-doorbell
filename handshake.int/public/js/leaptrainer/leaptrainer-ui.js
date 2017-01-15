@@ -228,8 +228,8 @@ jQuery(document).ready(function ($) {
      */
     function updateDimensions() {
 
-        windowHeight 		= win.innerHeight();
-        windowWidth 		= win.innerWidth();
+        windowHeight 		= main.innerHeight();
+        windowWidth 		= main.innerWidth();
 
         overlayShade.css	({height: windowHeight});
         main.css			({height: windowHeight});

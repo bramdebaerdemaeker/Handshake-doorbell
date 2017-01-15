@@ -4,7 +4,7 @@
 
 .section--authorization {
   @extend .section;
-  background-color:#2a363f;
+  background-color: $bg-auth;
 }
 
 .section--authorization__brand {

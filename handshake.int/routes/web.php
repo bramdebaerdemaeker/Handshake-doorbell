@@ -24,5 +24,5 @@ Route::get('/coming-soon', function () {
     return view('coming_soon');
 });
 
-Route::get('/gestures', 'Auth\RegisterController@gestures')->middleware('auth');//middleware toevoegen
+Route::get('/gestures', 'Auth\RegisterController@gestures');//->middleware('auth');//middleware toevoegen
 Route::post('/saveGestures', 'GestureController@registerGestures')->middleware('auth');
