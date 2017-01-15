@@ -231,7 +231,6 @@ jQuery(document).ready(function ($) {
         windowHeight 		= main.innerHeight();
         windowWidth 		= main.innerWidth();
 
-        overlayShade.css	({height: windowHeight});
         main.css			({height: windowHeight});
 
         /*
@@ -253,7 +252,7 @@ jQuery(document).ready(function ($) {
         /*
          * The font of the output text is also scaled with the window width
          */
-        outputText.css({left: outputTextLeft, width: windowWidth - outputTextLeft - 22, fontSize: Math.max(22, windowWidth/55)});
+        //outputText.css({left: outputTextLeft, width: windowWidth - outputTextLeft - 22, fontSize: Math.max(22, windowWidth/55)});
 
     }
 
@@ -336,7 +335,7 @@ jQuery(document).ready(function ($) {
         versionTag		   .css({display: 'none'});
         forkMe			   .css({display: 'none'});
 
-        outputText.css({background: 'transparent'});
+        //outputText.css({background: 'transparent'});
 
         setOutputText(message);
     }
@@ -352,7 +351,7 @@ jQuery(document).ready(function ($) {
         versionTag		   .css({display: ''});
         forkMe			   .css({display: ''});
 
-        outputText.css({background: ''});
+        //outputText.css({background: ''});
 
         setOutputText(message);
     }
@@ -386,6 +385,8 @@ jQuery(document).ready(function ($) {
      */
     trainer.on('training-started', function(gestureName) {
 
+        $('#progress').css({widht: 33%});
+
         var trainingGestureCount = trainer.trainingGestures;
         console.log("training start");
         setOutputText('Perform the ' + gestureName + ' gesture or pose ' + (trainingGestureCount > 1 ? trainingGestureCount + ' times' : ''));
@@ -399,9 +400,8 @@ jQuery(document).ready(function ($) {
         var trainingGestures = trainer.trainingGestures;
 
         renderGesture();
-
+        $('#progress').css({widht: 66%});
         var remaining = (trainingGestures - trainingSet.length);
-        console.log(gestureName);
         setOutputText('Perform the ' + gestureName + ' gesture ' + (remaining == 1 ? ' once more' : remaining + ' more times'));
     });
 
@@ -454,7 +454,7 @@ jQuery(document).ready(function ($) {
     /*
      * When the controller connects to the Leap web service we update the output text
      */
-    controller.on('connect', function() { setOutputText('Create a gesture or pose to get started'); });
+    controller.on('connect', function() { setOutputText('Create a gesture to get started'); });
 
     /*
      * BLUR and FOCUS event listeners can be added in order to display that the trainer is no longer listening for
