@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="home">
-      <h1 class="uppercase animation-element animation-element--slide-forward">the best</br>new way to login</h1>
+    <div class="home" id="home">
+      <h1 class="uppercase">the best</br>new way to login</h1>
     </div>
 
     <div class="container">

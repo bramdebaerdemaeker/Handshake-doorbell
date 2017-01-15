@@ -21,12 +21,6 @@
   transform: translate3d(0px, 150px, 0px);
 }
 
-.animation-element--slide-forward {
-  @extend .animation-element;
-  opacity: 0;
-  transform: translate3d(0px, 0px, -50px);
-}
-
 .in-view {
   opacity: 1;
   transform: translate3d(0px, 0px, 0px);

@@ -19,9 +19,9 @@
         </div>
       </div>
       <div class="nav__links">
-        <a href="/">Home</a>
-        <a href="/#feature" id="featureslink">Features</a>
-        <a href="contact">Contact</a>
+        <a href="/" class="{{ isActiveURL('/') }}">Home</a>
+        <a href="/#feature" id="featureslink" class="{{ isActiveURL('#feature') }}">Features</a>
+        <a href="contact" class="{{ isActiveURL('/contact') }}">Contact</a>
         <a href="/coming-soon"><button type="button" class="btn--nav uppercase" name="buy">download</button></a>
       </div>
     </div>

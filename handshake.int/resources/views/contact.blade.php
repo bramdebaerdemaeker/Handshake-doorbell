@@ -1,34 +1,35 @@
 @extends('layout')
 
 @section('content')
-  <div class="section section-contact">
-    <div class="contact-image">
-      <h1 class="uppercase">contact us</h1>
-    </div>
-    <div class="contact-content">
-      <div class="form">
-        <form method="post" autocomplete="on">
-
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" name="name">
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" name="email">
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea name="message" rows="8" cols="80"></textarea>
-          </div>
-
-          <div class="form-group">
-            <button type="button" name="button" class="uppercase">send</button>
-          </div>
-        </form>
+  <div class="section--contact">
+    <div class="section--contact__content">
+      <div class="section--contact__content__title">
+        <h2 class="uppercase">contact</h2>
       </div>
+      <div class="section--contact__content__body">
+        Your questions and special </br> requests are always welcome.
+      </div>
+      <div class="form">
+        <div class="mail"></div>
+        <form action="">
+          <h2 class="uppercase">contact us</h2>
+          <input type="text" placeholder="Your name"/>
+
+          <input type="text" placeholder="E-mail"/>
+
+          <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+
+          <div class="submit">Send</div>
+
+        </form>
     </div>
+
+    </div>
+
+
+  <div class="ok_message">
+  <span>We'll answer you soon!</span></div>
   </div>
+
+
 @stop
