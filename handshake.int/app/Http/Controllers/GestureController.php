@@ -20,9 +20,6 @@ class GestureController extends Controller
             $user->gesture2 = trim($request->input('gesture2'), '"');
             $user->gesture3 = trim($request->input('gesture3'), '"');
             $user->save();
-            var_dump($user->gesture1);
-            var_dump($user->gesture2);
-            var_dump($user->gesture3);
 
             return ("miauw");
         }

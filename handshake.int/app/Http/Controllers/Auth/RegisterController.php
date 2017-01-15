@@ -66,9 +66,6 @@ class RegisterController extends Controller
         }
     }
 
-    public function gestures(){
-        return view('gestures');
-    }
 
     protected function guard()
     {
@@ -96,7 +93,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'email' => 'required|email|max:255|unique:users',
             'name' => 'required|max:30|unique:users',
-            'photo' => 'required'
+            'photo' => 'required|image'
         ]);
     }
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use App\Libraries\Kairos as Kairos;
 
 class LoginController extends Controller
 {
@@ -36,5 +38,31 @@ class LoginController extends Controller
     {
         $this->middleware('guest', ['except' => 'logout']);
     }
-    
+
+    public function login(Request $request)
+    {
+        $image = $request->input('photo');
+
+        $img = substr($image, 1+strrpos($image, ','));
+
+        $Kairos = new Kairos("fffb0acd","ecef1039e93e6d353f9180fc97ce6360");
+        $gallery = 'gallery';
+        $argumentArray = array(
+            "image" => $img,
+            "gallery_name" => $gallery
+        );
+
+        $response = json_decode($Kairos->recognize($argumentArray));
+        if($response->images[0]->transaction->status == "success" && $response->images[0]->transaction->confidence >= 0.70){
+            return view()
+        }
+
+    }
+
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            'photo' => 'required|image'
+        ]);
+    }
 }
