@@ -441,13 +441,16 @@ body {
         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
       .section-auth .section-auth__picture .hide-picture i, .section-auth--register .section-auth__picture .hide-picture i, .section-auth .section-auth__information .hide-picture i, .section-auth--register .section-auth__information .hide-picture i {
         color: #ffffff; }
-  .section-auth .section-auth__login-link a, .section-auth--register .section-auth__login-link a {
+  .section-auth .section-auth__login-link a, .section-auth--register .section-auth__login-link a, .section-auth .section-auth__login-link-login a, .section-auth--register .section-auth__login-link-login a {
     color: #ffffff;
     text-decoration: none;
     margin-left: 23%; }
-    .section-auth .section-auth__login-link a:hover, .section-auth--register .section-auth__login-link a:hover {
+    .section-auth .section-auth__login-link a:hover, .section-auth--register .section-auth__login-link a:hover, .section-auth .section-auth__login-link-login a:hover, .section-auth--register .section-auth__login-link-login a:hover {
       color: #2db2ff;
       text-decoration: underline; }
+  .section-auth .section-auth__login-link-login, .section-auth--register .section-auth__login-link-login {
+    margin-top: 130px;
+    margin-left: 13%; }
   .section-auth .section-auth__button, .section-auth--register .section-auth__button {
     border: none;
     width: 55%;

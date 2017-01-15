@@ -45,8 +45,9 @@
 
         </form>
 
-        <div class="section-auth__login">
-          <a href="/login">Not a member yet? <span>Sign up!</span></a>
+        <div class="section-auth__login-link-login">
+
+          <a href="/register">Not a member yet? <span>Sign up!</span></a>
         </div>
     </div>
 
