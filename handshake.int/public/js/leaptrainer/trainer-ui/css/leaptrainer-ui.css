@@ -10,12 +10,15 @@
     display: flex;
     background-color: green;
 }*/
+/*body {
+  position: relative;
 
-#main {
+}*/
+.main {
     background: #2a363f;
-    z-index: 1;
-    height: 70vh;
-    width: 1000px;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
 }
 
 .button {
@@ -38,38 +41,46 @@
 #gesture-creation-area {
     height: 50px;
     background: #fff;
-    margin: 22px 0px 0px 0px;
+    margin-top: 100px;
     position: absolute;
     z-index: 20;
 }
 
-
-.gesture-form {
-  display: flex;
-  justify-content: space-between;
-
-  .name{
-    width: 70%;
-    border: none !important;
-  }
-
-  button {
-    width: 30%;
-  }
+#output-text {
+  position: absolute;
+  height: 50px;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0px;
+  color: #FFF;
+  cursor: pointer;
 
 }
 
-
-#create-new-gesture {
-    width: 102px;
-    float: left;
+.progress-bar {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  background-color: green;
+  bottom: 0px;
 }
 
-#gesture-creation-area img {
+#progress {
+  background-color: green;
+  height: 80px;
+}
+
+/*#gesture-creation-area img {
     margin-left: 20px;
-}
+}*/
 
-#overlay-shade {
+/*#overlay-shade {
     display: none;
     top: 0px;
     width: 100%;
@@ -78,9 +89,9 @@
     z-index: 9999;
     background: #000;
     opacity: 0.7;
-}
+}*/
 
-#close-overlay, #retrain-gesture {
+/*#close-overlay, #retrain-gesture {
     padding: 0px 25px;
     margin-top: 20px;
     background: #88CFEB;
@@ -96,24 +107,14 @@
 
 .overlay-open #overlay {
     display: block;
-}
+}*/
 
-#output-text {
-    font-size: 24px;
-    background: #A3DAEF;
-    width: 100%;
-    position: absolute;
-    height: 50px;
-    line-height: 50px;
-    bottom: 0px;
-    text-align: center;
-}
 
 #render-area {
     background: transparent;
 }
 
-#version-tag, #fork-me {
+/*#version-tag, #fork-me {
     position: fixed;
     font-size: 13px;
     bottom: 22px;
@@ -170,4 +171,4 @@
     text-align: center;
     position: absolute;
     bottom: 60px;
-}
+}*/

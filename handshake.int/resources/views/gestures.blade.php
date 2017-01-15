@@ -2,23 +2,22 @@
 
 @section('content')
     <link type="text/css" rel="stylesheet" href="/js/leaptrainer/trainer-ui/css/leaptrainer-ui.css" />
-    <div class="section">
-      <div id="body">
-          <div id="main">
+          <div id="main" class="main">
               <div id="gesture-creation-area">
                   <form id="new-gesture-form" class="gesture-form">
-                      <input type="text" id="new-gesture-name" class="name" placeholder="Create a Gesture"/>
-                      <input type="submit" id="create-new-gesture" value="Create" class="button"/>
+                      <input type="submit" id="create-new-gesture" value="Create gesture" class="button"/>
+
                   </form>
               </div>
               <div id="render-area">
               </div>
+              <div id="output-text"></div>
+              <div class="progress-bar" >
+                <div id="#progress">
+                  progress
+                </div>
+              </div>
           </div>
-          <div id="output-text"></div>
-          <div id="overlay-shade"></div>
-
-      </div>
-    </div>
     <form action="/saveGestures" method="post">
         {{ csrf_field() }}
         <input type="hidden" id="gesture1" name="gesture1">
