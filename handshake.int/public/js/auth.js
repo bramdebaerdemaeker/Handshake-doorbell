@@ -1,13 +1,13 @@
-$('.picture').hide();
+$('.section-auth__picture').hide();
 
 $('.hide-picture').on('click', function(){
   console.log('pic gaat hiden');
-  $('.picture').hide();
-  $('.information').show();
+  $('.section-auth__picture').hide();
+  $('.section-auth__information').show();
 });
 
 $('.hide-information').on('click', function(){
   console.log('info gaat hiden');
-  $('.information').hide();
-  $('.picture').show();
+  $('.section-auth__information').hide();
+  $('.section-auth__picture').show();
 });
