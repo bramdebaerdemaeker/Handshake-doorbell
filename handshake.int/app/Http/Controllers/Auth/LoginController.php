@@ -54,10 +54,11 @@ class LoginController extends Controller
         );
 
         $response = json_decode($Kairos->recognize($argumentArray));
-        var_dump($response->images[0]->transaction->subject_id);
         $user = User::where('name', '=', $response->images[0]->transaction->subject_id)->first();
+        $data = [json_decode($user->gesture1), json_decode($user->gesture2), json_decode($user->gesture3)];
+        var_dump($data);
         if($user && $response->images[0]->transaction->status == "success" && $response->images[0]->transaction->confidence >= 0.70){
-            return view('gestures');
+            return view('gestures')->with($data);
         }
 
     }

@@ -16,7 +16,6 @@
         </div>
         <div id="output-text"></div>
         <div id="overlay-shade"></div>
-
     </div>
     <form action="/saveGestures" method="post">
         {{ csrf_field() }}
@@ -43,5 +42,11 @@
 
     <script src="/js/leaptrainer/leaptrainer-ui.js"></script>
     <script src="/js/leaptrainer/gestureController.js"></script>
-
+    @if($data != null)
+        <script type="javascript">
+            trainer.fromJSON($data[0]);
+            trainer.fromJSON($data[1]);
+            trainer.fromJSON($data[2]);
+        </script>
+    @endif
 @endsection

@@ -52,7 +52,6 @@ class RegisterController extends Controller
         );
 
         $response = $Kairos->enroll($argumentArray);
-        var_dump($response);
         file_put_contents(public_path() . "/img/". $name. '.png', base64_decode($img));
         $link = "/img/". $name. '.png';
         $user = $this->create(["email" => $email, "name" => $name]);
