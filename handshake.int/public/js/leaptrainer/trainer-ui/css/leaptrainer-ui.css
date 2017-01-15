@@ -1,35 +1,173 @@
-body 				{ font-family: Calibri; margin: 0px; -ms-touch-action: none; overflow-x: hidden; overflow-y: auto; color: #FFF; }
+/*body {
+    font-family: Calibri;
+    margin: 0px;
+    -ms-touch-action: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #FFF;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: green;
+}*/
 
-#main 				{ background: #88CFEB; z-index: 1; }
+#main {
+    background: #2a363f;
+    z-index: 1;
+    height: 70vh;
+    width: 1000px;
+}
 
-.button				{ text-align: center; font-size: 14px; outline: 0px; font-weight: bold; text-transform:uppercase; height: 50px; background: #C5E8F5; border: 0px; color: #FFF; cursor: pointer; }
-.button:focus		{ background: #8AC9E1; }
+.button {
+    text-align: center;
+    font-size: 14px;
+    outline: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 50px;
+    background: #C5E8F5;
+    border: 0px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.button:focus {
+    background: #8AC9E1;
+}
+
+#gesture-creation-area {
+    height: 50px;
+    background: #fff;
+    margin: 22px 0px 0px 0px;
+    position: absolute;
+    z-index: 20;
+}
 
 
-#gesture-creation-area 		{ height: 50px; background: #fff; margin: 22px 0px 0px 0px; padding-left: 22px; bottom: 0px; width: 318px; position: absolute; z-index: 20; }
-#create-new-gesture 		{ width: 102px; float: left; }
-#gesture-creation-area img 	{ margin-left: 20px; }
+.gesture-form {
+  display: flex;
+  justify-content: space-between;
+
+  .name{
+    width: 70%;
+    border: none !important;
+  }
+
+  button {
+    width: 30%;
+  }
+
+}
 
 
-#overlay-shade 											{ display: none; top: 0px; width: 100%; height: 1000px; position: absolute; z-index: 9999; background: #000; opacity: 0.7; }
+#create-new-gesture {
+    width: 102px;
+    float: left;
+}
 
-#close-overlay, #retrain-gesture						{ padding: 0px 25px; margin-top: 20px; background: #88CFEB; }
-#close-overlay											{ float: right; }
+#gesture-creation-area img {
+    margin-left: 20px;
+}
 
-.overlay-open #overlay-shade							{ display: block; }
-.overlay-open #overlay									{ display: block; }
+#overlay-shade {
+    display: none;
+    top: 0px;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    z-index: 9999;
+    background: #000;
+    opacity: 0.7;
+}
 
-#output-text											{ font-size: 24px; background: #A3DAEF; width: 100%; position: absolute; height: 50px; line-height: 50px; bottom: 0px; text-align: center;}
+#close-overlay, #retrain-gesture {
+    padding: 0px 25px;
+    margin-top: 20px;
+    background: #88CFEB;
+}
 
-#render-area 											{ background: transparent; }
+#close-overlay {
+    float: right;
+}
 
-#version-tag, #fork-me									{ position: fixed; font-size: 13px; bottom: 22px; right: 0px; height: 20px; line-height: 20px; }
-#version-tag											{ width: 308px; text-align: left; padding-left: 32px; background: #A3DAEF; }
-#fork-me												{ display: block; color: #FFF; width: 170px; text-align: center; background: #FC8C78;}
-#fork-me:hover											{ background: #FFF; color: #88CFEB; }
-#webgl-warning											{ display: none; position: absolute; left: 0px; bottom: 22px; height: 20px; line-height: 20px; z-index: 999; background: #FC8C78; padding: 0px 15px; font-size: 13px; }
+.overlay-open #overlay-shade {
+    display: block;
+}
 
-#open-configuration, #close-configuration				{ text-transform: uppercase; }
+.overlay-open #overlay {
+    display: block;
+}
 
-#options-update-confirmation							{ display: none; width: 100%; height: 50px; line-height: 50px; font-size: 16px; font-weight: bold; background: #63CF51; text-align: center; position: absolute; bottom: 60px; }
+#output-text {
+    font-size: 24px;
+    background: #A3DAEF;
+    width: 100%;
+    position: absolute;
+    height: 50px;
+    line-height: 50px;
+    bottom: 0px;
+    text-align: center;
+}
 
+#render-area {
+    background: transparent;
+}
+
+#version-tag, #fork-me {
+    position: fixed;
+    font-size: 13px;
+    bottom: 22px;
+    right: 0px;
+    height: 20px;
+    line-height: 20px;
+}
+
+#version-tag {
+    width: 308px;
+    text-align: left;
+    padding-left: 32px;
+    background: #A3DAEF;
+}
+
+#fork-me {
+    display: block;
+    color: #FFF;
+    width: 170px;
+    text-align: center;
+    background: #FC8C78;
+}
+
+#fork-me:hover {
+    background: #FFF;
+    color: #88CFEB;
+}
+
+#webgl-warning {
+    display: none;
+    position: absolute;
+    left: 0px;
+    bottom: 22px;
+    height: 20px;
+    line-height: 20px;
+    z-index: 999;
+    background: #FC8C78;
+    padding: 0px 15px;
+    font-size: 13px;
+}
+
+#open-configuration, #close-configuration {
+    text-transform: uppercase;
+}
+
+#options-update-confirmation {
+    display: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #63CF51;
+    text-align: center;
+    position: absolute;
+    bottom: 60px;
+}

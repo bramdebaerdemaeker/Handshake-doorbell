@@ -110,4 +110,8 @@ class RegisterController extends Controller
             'name' => $data['name']
         ]);
     }
+
+    public function gestures(){
+      return view ('gestures');
+    }
 }
