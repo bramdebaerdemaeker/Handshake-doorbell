@@ -101,6 +101,29 @@
         }
     }
 
+
+
+    .section-auth__login-link {
+      a{
+        color: $white;
+        text-decoration: none;
+        margin-left: 23%;
+
+        &:hover {
+          color: $bg-button;
+          text-decoration: underline;
+        }
+      }
+
+    }
+
+    .section-auth__login-link-login {
+      @extend .section-auth__login-link;
+      margin-top: 130px;
+      margin-left: 13%;
+    }
+
+
     .section-auth__button {
         border: none;
         width: 55%;

@@ -40,7 +40,7 @@
 
 
         <!-- face recognition -->
-          <div class="section-auth__picture">
+          <div class="section-auth__picture" id="section-auth__picture">
             <h2>Show us your beautiful smile</h2>
             <div class="camera">
                 <video id="video" width="300" height="300">Video stream not available.</video>
@@ -50,6 +50,10 @@
           </div>
 
         </form>
+
+        <div class="section-auth__login-link">
+          <a href="/login">Already an account?</a>
+        </div>
     </div>
 
 </div>
