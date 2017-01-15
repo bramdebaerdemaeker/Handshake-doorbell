@@ -16,12 +16,12 @@ class GestureController extends Controller
             'gesture3' => 'required|json'
         ]);
         if(!$validator->fails()){
-            $user->gesture1 = trim($request->input('gesture1'),'"');
-            $user->gesture2 = trim($request->input('gesture2'), '"');
-            $user->gesture3 = trim($request->input('gesture3'), '"');
+            $user->gesture1 = json_encode($request->input('gesture1'));
+            $user->gesture2 = json_encode($request->input('gesture2'));
+            $user->gesture3 = json_encode($request->input('gesture3'));
+            $user->registration_complete = true;
             $user->save();
-
-            return ("miauw");
+            return redirect('home');
         }
         else{
             return redirect('/gestures')->withErrors($validator);

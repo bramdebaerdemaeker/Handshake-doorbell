@@ -38,6 +38,7 @@ class RegisterController extends Controller
         $image = $request->input('photo');
         $email = $request->input('email');
         $name = $request->input('name');
+
         $this->validator($request->all())->validate();
 
         $img = substr($image, 1+strrpos($image, ','));
@@ -51,7 +52,7 @@ class RegisterController extends Controller
         );
 
         $response = $Kairos->enroll($argumentArray);
-
+        var_dump($response);
         file_put_contents(public_path() . "/img/". $name. '.png', base64_decode($img));
         $link = "/img/". $name. '.png';
         $user = $this->create(["email" => $email, "name" => $name]);
@@ -93,7 +94,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'email' => 'required|email|max:255|unique:users',
             'name' => 'required|max:30|unique:users',
-            'photo' => 'required|image'
+            'photo' => 'required'
         ]);
     }
 

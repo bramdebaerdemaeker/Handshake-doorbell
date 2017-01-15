@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use App\User;
 use App\Libraries\Kairos as Kairos;
 
 class LoginController extends Controller
@@ -53,8 +54,10 @@ class LoginController extends Controller
         );
 
         $response = json_decode($Kairos->recognize($argumentArray));
-        if($response->images[0]->transaction->status == "success" && $response->images[0]->transaction->confidence >= 0.70){
-            return view()
+        var_dump($response->images[0]->transaction->subject_id);
+        $user = User::where('name', '=', $response->images[0]->transaction->subject_id)->first();
+        if($user && $response->images[0]->transaction->status == "success" && $response->images[0]->transaction->confidence >= 0.70){
+            return view('gestures');
         }
 
     }
