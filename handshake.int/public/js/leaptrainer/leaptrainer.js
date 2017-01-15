@@ -39,6 +39,7 @@
  * Create the LeapTrainer namespace.
  */
 var LeapTrainer = {};
+var hasGestures = false;
 
 /**
  * Create the basic class structure.
@@ -159,7 +160,7 @@ LeapTrainer.Controller = Class.extend({
     paused					: false,// This variable is set by the pause() method and unset by the resume() method - when true it disables frame monitoring temporarily.
 
     renderableGesture		: null, // Implementations that record a gestures for graphical rendering should store the data for the last detected gesture in this array.
-
+    hasGestures             : false,
     /**
      * The controller initialization function - this is called just after a new instance of the controller is created to parse the options array,
      * connect to the Leap Motion device (unless an existing Leap.Controller object was passed as a parameter), and register a frame listener with
@@ -898,6 +899,14 @@ LeapTrainer.Controller = Class.extend({
         this.poses[gestureName] = imp.pose;
 
         return imp;
+    },
+    hasAll: function(){
+        hasGestures = true;
+    },
+    hasData: function () {
+        if(hasGestures == true){
+            return true;
+        }
     },
 
     /**

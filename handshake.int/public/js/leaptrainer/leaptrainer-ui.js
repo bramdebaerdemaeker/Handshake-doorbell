@@ -88,6 +88,7 @@ jQuery(document).ready(function ($) {
         gesture2            = $('#gesture2'),
         gesture3            = $('#gesture3'),
         gesturesubmit       = $('#gesturesubmit'),
+        gestureCounter      = 0,
 
         /*
          * We set up the WebGL renderer - switching to a canvas renderer if needed
@@ -289,6 +290,7 @@ jQuery(document).ready(function ($) {
         else if(count == 2){
             name = "gesture3";
             count += 1;
+
         }
         else if(count == 3){
             gesture1.val(trainer.toJSON('gesture1'));
@@ -356,6 +358,9 @@ jQuery(document).ready(function ($) {
         setOutputText(message);
     }
 
+    function gestureCount() {
+        gestureCounter =+ 1;
+    }
     /*
      * ------------------------------------------------------------------------------------------
      *  7. Training event listeners
@@ -385,7 +390,7 @@ jQuery(document).ready(function ($) {
      */
     trainer.on('training-started', function(gestureName) {
 
-        $('#progress').css({widht: 33%});
+        $('#progress').css({widht: 33+'%'});
 
         var trainingGestureCount = trainer.trainingGestures;
         console.log("training start");
@@ -400,7 +405,7 @@ jQuery(document).ready(function ($) {
         var trainingGestures = trainer.trainingGestures;
 
         renderGesture();
-        $('#progress').css({widht: 66%});
+        $('#progress').css({widht: 66+'%'});
         var remaining = (trainingGestures - trainingSet.length);
         setOutputText('Perform the ' + gestureName + ' gesture ' + (remaining == 1 ? ' once more' : remaining + ' more times'));
     });
@@ -422,14 +427,25 @@ jQuery(document).ready(function ($) {
      * When a known gesture is recognised we select it in the gesture list, render it, update the gesture list entry progress bar to
      * match the hit value, and set the output text.
      */
+
     trainer.on('gesture-recognized', function(hit, gestureName, allHits) {
-        console.log("recognized " + gestureName);
 
         renderGesture();
-
+        if(trainer.hasData() == true){
+            if(gestureCounter == 0){
+                trainer.on('gesture1', gestureCount());
+            }
+            else if(gestureCounter == 1){
+                trainer.on('gesture2', gestureCount());
+            }
+            else if(gestureCounter == 2) {
+                trainer.on('gesture3', gestureCount());
+            }
+        }
         var hitPercentage = Math.min(parseInt(100 * hit), 100);
 
         setOutputText('<span style="font-weight: bold">' + gestureName + '</span> : ' + hitPercentage + '% MATCH');
+
     });
 
     /*

@@ -26,3 +26,4 @@ Route::get('/coming-soon', function () {
 
 Route::get('/gestures', 'Auth\RegisterController@gestures');//->middleware('auth');//middleware toevoegen
 Route::post('/saveGestures', 'GestureController@registerGestures')->middleware('auth');
+Route::get('/logout' , 'Auth\LoginController@logout')->middleware('auth');

@@ -25,7 +25,9 @@
         <a href="/coming-soon"><button type="button" class="btn--nav uppercase" name="buy">download</button></a>
       </div>
     </div>
-
+    @if(Auth::user())
+    {{ Auth::user()->name }}
+    @endif
     @yield('content')
 
 
