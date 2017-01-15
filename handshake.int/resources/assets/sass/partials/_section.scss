@@ -117,3 +117,20 @@
     background-image: $bg-pattern;
     background-size: 15px 15px;
 }
+
+.section--coming-soon {
+  @extend .section;
+  flex-direction: column;
+
+  h1 {
+    font-size: 3.2em;
+    letter-spacing: 4px;
+    color: $bg-button;
+  }
+  span {
+    font-size: 1.8em;
+    color: $bg-button;
+    opacity: .8;
+    -webkit-filter: grayscale(.6);
+  }
+}

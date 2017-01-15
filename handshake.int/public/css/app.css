@@ -44,7 +44,7 @@ body {
 .highlight-color {
   color: #2db2ff; }
 
-.btn-blue, .nav__links .btn--nav, .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service {
+.btn-blue, .nav__links .btn--nav, .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service, .section--coming-soon .btn--section-service {
   border: none;
   background-color: #2db2ff;
   color: #ffffff; }
@@ -135,32 +135,33 @@ body {
 /*******************
 * Feature sections *
 ********************/
-.section, .section__bg-image, .section--feature-2, .section--feature-3, .section--service {
+.section, .section__bg-image, .section--feature-2, .section--feature-3, .section--service, .section--coming-soon {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img {
+  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section--coming-soon .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img, .section--coming-soon .section--feature-1 .section__img, .section--feature-1 .section--coming-soon .section__img {
     width: 500px;
     height: 400px; }
-  .section .section__content__title, .section__bg-image .section__content__title, .section--feature-2 .section__content__title, .section--feature-3 .section__content__title, .section--service .section__content__title, .section .section__content__title--inverted, .section__bg-image .section__content__title--inverted, .section--feature-2 .section__content__title--inverted, .section--feature-3 .section__content__title--inverted, .section--service .section__content__title--inverted {
+  .section .section__content__title, .section__bg-image .section__content__title, .section--feature-2 .section__content__title, .section--feature-3 .section__content__title, .section--service .section__content__title, .section--coming-soon .section__content__title, .section .section__content__title--inverted, .section__bg-image .section__content__title--inverted, .section--feature-2 .section__content__title--inverted, .section--feature-3 .section__content__title--inverted, .section--service .section__content__title--inverted, .section--coming-soon .section__content__title--inverted {
     font-family: avenir-regular;
     font-size: 1.4em;
     line-height: 130%;
     letter-spacing: 2px; }
-    .section .section__content__title span, .section__bg-image .section__content__title span, .section--feature-2 .section__content__title span, .section--feature-3 .section__content__title span, .section--service .section__content__title span, .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span {
+    .section .section__content__title span, .section__bg-image .section__content__title span, .section--feature-2 .section__content__title span, .section--feature-3 .section__content__title span, .section--service .section__content__title span, .section--coming-soon .section__content__title span, .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span, .section--coming-soon .section__content__title--inverted span {
       opacity: 0.3; }
-  .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span {
+  .section .section__content__title--inverted span, .section__bg-image .section__content__title--inverted span, .section--feature-2 .section__content__title--inverted span, .section--feature-3 .section__content__title--inverted span, .section--service .section__content__title--inverted span, .section--coming-soon .section__content__title--inverted span {
     opacity: 0.5; }
-  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img,
+  .section .section__content, .section__bg-image .section__content, .section--feature-2 .section__content, .section--feature-3 .section__content, .section--service .section__content, .section--coming-soon .section__content, .section .section--feature-1 .section__img, .section--feature-1 .section .section__img, .section__bg-image .section--feature-1 .section__img, .section--feature-1 .section__bg-image .section__img, .section--feature-2 .section--feature-1 .section__img, .section--feature-1 .section--feature-2 .section__img, .section--feature-3 .section--feature-1 .section__img, .section--feature-1 .section--feature-3 .section__img, .section--service .section--feature-1 .section__img, .section--feature-1 .section--service .section__img, .section--coming-soon .section--feature-1 .section__img, .section--feature-1 .section--coming-soon .section__img,
   .section .section__img,
   .section__bg-image .section__img,
   .section--feature-2 .section__img,
   .section--feature-3 .section__img,
-  .section--service .section__img {
+  .section--service .section__img,
+  .section--coming-soon .section__img {
     margin: 70px; }
-  .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service {
+  .section .btn--section-service, .section__bg-image .btn--section-service, .section--feature-2 .btn--section-service, .section--feature-3 .btn--section-service, .section--service .btn--section-service, .section--coming-soon .btn--section-service {
     border-radius: 25px;
     padding: 10px 15px;
     font-size: 1em; }
@@ -225,6 +226,18 @@ body {
   text-align: center;
   background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) 0.1px, transparent 1px, transparent 100%);
   background-size: 15px 15px; }
+
+.section--coming-soon {
+  flex-direction: column; }
+  .section--coming-soon h1 {
+    font-size: 3.2em;
+    letter-spacing: 4px;
+    color: #2db2ff; }
+  .section--coming-soon span {
+    font-size: 1.8em;
+    color: #2db2ff;
+    opacity: .8;
+    -webkit-filter: grayscale(0.6); }
 
 /*
 *

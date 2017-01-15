@@ -22,7 +22,7 @@
         <a href="/">Home</a>
         <a href="/#feature" id="featureslink">Features</a>
         <a href="contact">Contact</a>
-        <a href="#"><button type="button" class="btn--nav uppercase" name="buy">download</button></a>
+        <a href="/coming-soon"><button type="button" class="btn--nav uppercase" name="buy">download</button></a>
       </div>
     </div>
 
