@@ -20,7 +20,7 @@
       </div>
       <div class="nav__links">
         <a href="/">Home</a>
-        <a href="#">Features</a>
+        <a href="/#feature" id="featureslink">Features</a>
         <a href="contact">Contact</a>
         <a href="#"><button type="button" class="btn--nav uppercase" name="buy">download</button></a>
       </div>
@@ -35,7 +35,7 @@
         Copyright  ©  HANDSHAKE | 2017  </br>
       </div>
       <div class="footer__middle">
-        <i class="fa fa-envelope-o" aria-hidden="true"></i>help@handshake.com
+        <i class="fa fa-envelope-o" aria-hidden="true"></i> help@handshake.com
       </div>
     </div>
 

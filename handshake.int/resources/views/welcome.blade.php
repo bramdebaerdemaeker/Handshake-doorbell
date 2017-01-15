@@ -3,13 +3,16 @@
 @section('content')
 
     <div class="home">
-      <h1 class="uppercase">the best</br>new way to login</h1>
+      <h1 class="uppercase animation-element animation-element--slide-forward">the best</br>new way to login</h1>
     </div>
 
     <div class="container">
 
       <!-- section 1 -->
-      <div class="section--feature-1">
+      <div class="section--feature-1" id="feature">
+        <div class="section--feature-1__intro">
+          <h1>Introducing Handshake</h1>
+        </div>
         <div class="section__bg-image">
           <div class="section__content animation-element animation-element--slide-left">
             <div class="section__content__title">
@@ -70,7 +73,7 @@
           </div>
         </div>
         <div class="section__img">
-          <img src="http://placehold.it/800x450">
+          <iframe src="http://player.vimeo.com/video/63534746" width="800" height="450"></iframe>
         </div>
       </div>
 

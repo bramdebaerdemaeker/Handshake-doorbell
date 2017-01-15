@@ -51,6 +51,15 @@
 .section--feature-1 {
   @include angle-edge(topright, 3deg);
   z-index:10;
+  position: relative;
+
+  .section--feature-1__intro {
+    font-size: 1.4em;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   .section__img {
     @extend .section__content;

@@ -118,16 +118,19 @@ body {
   height: 90vh;
   width: 100%;
   position: relative;
-  background: url("/img/home.jpg") no-repeat center;
+  background: url("/img/home/home3.jpg") no-repeat center;
   background-size: cover;
   display: flex;
   align-items: center; }
   .home h1 {
-    margin-top: 22%;
-    margin-left: 15%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #ffffff;
-    font-size: 2.8em;
-    font-family: avenir-bold; }
+    font-size: 3.2em;
+    font-family: avenir-bold;
+    text-align: center; }
 
 /*******************
 * Feature sections *
@@ -165,8 +168,9 @@ body {
 .section--feature-1 {
   position: relative;
   background: #ffffff;
-  z-index: 10; }
-  .section--feature-1::before, .section--feature-1::after {
+  z-index: 10;
+  position: relative; }
+  .section--feature-1::before {
     content: '';
     width: 100%;
     height: 80px;
@@ -178,9 +182,15 @@ body {
     top: 0;
     transform-origin: left top;
     transform: skewY(-3deg); }
+  .section--feature-1 .section--feature-1__intro {
+    font-size: 1.4em;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .section__bg-image {
-  background-image: url("/img/macbook.png");
+  background-image: url("/img/feature1/corner.png");
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain; }
@@ -222,7 +232,7 @@ body {
 .section-contact {
   flex-direction: column; }
   .section-contact .contact-image {
-    background: url("/img/home.jpg") no-repeat center;
+    background: url("/img/home/home3.jpg") no-repeat center;
     height: 50%;
     width: 100%;
     display: flex;
@@ -310,7 +320,7 @@ body {
   .footer .footer__left {
     text-align: center; }
 
-.animation-element, .animation-element--slide-left, .animation-element--slide-right, .animation-element--slide-up {
+.animation-element, .animation-element--slide-left, .animation-element--slide-right, .animation-element--slide-up, .animation-element--slide-forward {
   position: relative;
   transition: all 1000ms linear; }
 
@@ -325,6 +335,10 @@ body {
 .animation-element--slide-up {
   opacity: 0;
   transform: translate3d(0px, 150px, 0px); }
+
+.animation-element--slide-forward {
+  opacity: 0;
+  transform: translate3d(0px, 0px, -50px); }
 
 .in-view {
   opacity: 1;
