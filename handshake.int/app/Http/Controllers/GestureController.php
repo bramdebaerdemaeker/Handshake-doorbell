@@ -21,7 +21,7 @@ class GestureController extends Controller
             $user->gesture3 = json_encode($request->input('gesture3'));
             $user->registration_complete = true;
             $user->save();
-            return redirect('home');
+            return redirect('/');
         }
         else{
             return redirect('/gestures')->withErrors($validator);

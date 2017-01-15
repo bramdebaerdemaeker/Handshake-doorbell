@@ -166,7 +166,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravelista\Ekko\EkkoServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -224,7 +223,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
 
     ],
 
