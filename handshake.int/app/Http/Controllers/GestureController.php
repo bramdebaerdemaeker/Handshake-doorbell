@@ -29,7 +29,6 @@ class GestureController extends Controller
     }
 
     public function checkGestures(Request $request){
-        $user = Auth::user;
         return redirect('/');
     }
 }
