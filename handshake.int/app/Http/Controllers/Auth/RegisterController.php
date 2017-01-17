@@ -51,26 +51,21 @@ class RegisterController extends Controller
             "gallery_name" => $gallery
         );
 
-        $response = $Kairos->enroll($argumentArray);
-        file_put_contents(public_path() . "/img/". $name. '.png', base64_decode($img));
-        $link = "/img/". $name. '.png';
-        $user = $this->create(["email" => $email, "name" => $name]);
-        $user->image_link = $link;
-        $user->registration_complete = false;
-        $user->save();
-
-        $this->guard()->login($user);
-
-        if($user && $response){
+        $response = json_decode($Kairos->enroll($argumentArray));
+        if($response->images[0]->transaction->status == "success") {
+            file_put_contents(public_path() . "/img/" . $name . '.png', base64_decode($img));
+            $link = "/img/" . $name . '.png';
+            $request->session()->put('link', $link);
+            $request->session()->put('email', $email);
+            $request->session()->put('name', $name);
             return view('gestures')->with('data', '');
+        }
+        else{
+            redirect('/');
         }
     }
 
 
-    protected function guard()
-    {
-        return Auth::guard();
-    }
 
     /**
      * Create a new controller instance.

@@ -25,6 +25,6 @@ Route::get('/coming-soon', function () {
 });
 
 Route::get('/gestures', 'Auth\RegisterController@gestures')->middleware('auth');//middleware toevoegen
-Route::post('/saveGestures', 'GestureController@registerGestures')->middleware('auth');
-Route::post('/checkGestures', 'GestureController@checkGestures')->middleware('auth');
+Route::post('/saveGestures', 'GestureController@registerGestures')->middleware('web');
+Route::post('/checkGestures', 'GestureController@checkGestures')->middleware('web');
 Route::get('/logout' , 'Auth\LoginController@logout')->middleware('auth');
