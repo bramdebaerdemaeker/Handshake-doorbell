@@ -20,12 +20,3 @@
 ## Demo
 + Product toepassen in praktijk als vernieuwde deurbel functie
 
-
-## to do
-+ frontend:
- - branding: belangrijke factoren die visueel duidelijk moeten zijn: safety, easy to use,...
- - website opzetten 
-
-+ backend:
- - face recognition op windows tablet testen
- - hand gestures opslaan via leaptrainer of alternatief, opgeslagen data hiervan omzetten naar password
